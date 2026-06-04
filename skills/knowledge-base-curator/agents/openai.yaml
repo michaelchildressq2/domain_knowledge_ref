@@ -1,0 +1,5 @@
+interface:
+  display_name: Knowledge Base Curator
+  short_description: Curate subject-organized markdown pattern libraries for agent guidance.
+  icon: 📚
+  brand_color: '#415A77'

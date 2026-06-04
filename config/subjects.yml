@@ -1,0 +1,95 @@
+subjects:
+  reliability:
+    description: Availability, resilience, recovery, observability, incident response, and runtime continuity.
+    default_tags:
+      - platform-engineering
+      - sre
+      - reliability
+      - runtime-operations
+    concept_terms:
+      - availability
+      - resiliency
+      - recovery
+      - failover
+      - failure domain
+      - health check
+      - observability
+      - incident
+      - capacity
+  data:
+    description: Data consistency, continuity, migration, replication, state ownership, and integrity patterns.
+    default_tags:
+      - data-platform
+      - data-consistency
+      - design-review
+    concept_terms:
+      - data
+      - consistency
+      - replication
+      - schema
+      - migration
+      - backup
+      - restore
+      - transaction
+      - state
+  infrastructure-as-code:
+    description: Infrastructure design, provisioning, stack boundaries, modules, delivery, drift, environments, and configuration.
+    default_tags:
+      - infrastructure-as-code
+      - platform-engineering
+      - implementation-planning
+    concept_terms:
+      - terraform
+      - pulumi
+      - ansible
+      - stack
+      - module
+      - environment
+      - drift
+      - configuration
+      - reproducibility
+      - idempotency
+  governance:
+    description: Policy, standards, approval flows, guardrails, auditability, risk controls, and platform operating model.
+    default_tags:
+      - governance
+      - platform-engineering
+      - design-review
+    concept_terms:
+      - policy
+      - audit
+      - compliance
+      - approval
+      - guardrail
+      - standard
+      - control
+      - review
+  security:
+    description: Identity, secrets, least privilege, isolation, secure configuration, and threat-driven platform patterns.
+    default_tags:
+      - security-engineering
+      - security
+      - design-review
+    concept_terms:
+      - identity
+      - secret
+      - key
+      - credential
+      - privilege
+      - isolation
+      - encryption
+      - access
+  operations:
+    description: Day-2 operations, runbooks, supportability, maintenance, decommissioning, and operational feedback loops.
+    default_tags:
+      - platform-engineering
+      - operability
+      - runtime-operations
+    concept_terms:
+      - runbook
+      - maintenance
+      - decommission
+      - support
+      - operational
+      - feedback
+      - lifecycle

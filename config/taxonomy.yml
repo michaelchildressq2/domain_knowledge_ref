@@ -1,0 +1,80 @@
+required_tag_families:
+  domain:
+    - platform-engineering
+    - cloud-architecture
+    - infrastructure-as-code
+    - sre
+    - devops
+    - security-engineering
+    - data-platform
+  concern:
+    - high-availability
+    - disaster-recovery
+    - data-consistency
+    - data-continuity
+    - safe-change
+    - zero-downtime
+    - configuration-management
+    - secrets-management
+    - environment-parity
+    - modular-architecture
+    - governance
+    - observability
+    - cost-management
+    - security
+    - scalability
+    - operability
+  lifecycle:
+    - design-review
+    - implementation-planning
+    - delivery-pipeline
+    - runtime-operations
+    - incident-response
+    - migration
+    - refactoring
+    - decommissioning
+  mechanism:
+    - version-control
+    - pipeline-automation
+    - policy-as-code
+    - testing
+    - immutability
+    - reproducibility
+    - idempotency
+    - module-boundaries
+    - stack-design
+    - parameterization
+    - drift-prevention
+    - rollback
+    - roll-forward
+  scope:
+    - cloud-agnostic
+    - aws
+    - azure
+    - gcp
+    - kubernetes
+    - terraform
+    - pulumi
+    - ansible
+    - database
+    - networking
+    - identity
+
+relationship_labels:
+  - depends-on
+  - enables
+  - conflicts-with
+  - alternative-to
+  - strengthens
+  - overlaps-with
+
+source_confidence:
+  high: source is authoritative, directly relevant, and available to the reviewer.
+  medium: pattern is synthesized from multiple sources or public metadata plus general engineering practice.
+  low: plausible inference that needs review before operational use.
+
+reserved_statuses:
+  - seed
+  - draft
+  - reviewed
+  - deprecated

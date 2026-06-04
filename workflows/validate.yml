@@ -1,0 +1,24 @@
+name: validate-pattern-library
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Validate patterns
+        run: python scripts/validate_patterns.py
+      - name: Build index
+        run: python scripts/build_index.py
+      - name: Suggest tags
+        run: python scripts/enrich_related_tags.py --suggest

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scaffold Issue Creation"
+  short_description: "Set up GitHub/GitLab issue guidance"
+  default_prompt: "Use $scaffold-issue-creation to set up this repo for agent-created GitHub or GitLab issues."
+
+policy:
+  allow_implicit_invocation: true

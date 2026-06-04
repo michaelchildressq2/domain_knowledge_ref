@@ -1,0 +1,11 @@
+services:
+  kb-agent:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+    environment:
+      KB_REPO_ROOT: /workspace
+    command: bash
