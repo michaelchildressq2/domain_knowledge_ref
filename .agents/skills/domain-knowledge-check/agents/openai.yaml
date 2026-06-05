@@ -1,7 +1,7 @@
 interface:
   display_name: "Domain Knowledge Check"
-  short_description: "Grounded pattern alignment reviews"
-  default_prompt: "Use $domain-knowledge-check to review this design against local subject-group patterns and return grounded alignment scores."
+  short_description: "Cross-domain grounded pattern reviews"
+  default_prompt: "Use $domain-knowledge-check to review this design across local subject-group patterns, fan out across adjacent domain lenses, and return grounded alignment scores."
 
 policy:
   allow_implicit_invocation: true

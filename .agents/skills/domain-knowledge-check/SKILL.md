@@ -1,6 +1,6 @@
 ---
 name: domain-knowledge-check
-description: Check architecture, platform, infrastructure, cloud, delivery, operations, reliability, scaling, governance, configuration, secrets, and data-system questions against the local subject-groups and patterns corpus. Use when Codex needs reference-grounded critique, alignment scoring, relationship mapping, or recommendations from local patterns, anti-patterns, principles, governance patterns, and decision guides. Return "no matching context" for unrelated prompts.
+description: Check architecture, platform, infrastructure, domain-modeling, cloud, delivery, operations, reliability, scaling, governance, configuration, secrets, and data-system questions against the local subject-groups and patterns corpus. Use when Codex needs cross-domain, reference-grounded critique, alignment scoring, relationship mapping, or recommendations from local patterns, anti-patterns, principles, governance patterns, and decision guides. Return "no matching context" for unrelated prompts.
 ---
 
 # Domain Knowledge Check
@@ -21,15 +21,34 @@ Resolve paths relative to the repository or workspace root that contains `subjec
 1. Extract the user's concrete domain terms, technologies, risks, design decisions, symptoms, and requested outcome.
 2. Search the subject-group index first. Match against group names, pattern titles, ids, types, tags, summaries, and source paths.
 3. Read every subject group that appears relevant or potentially relevant. Include adjacent groups when the prompt spans concerns such as change plus reliability, data plus coordination, or governance plus secrets.
-4. Collect all candidate patterns, anti-patterns, governance patterns, and decision guides that plausibly relate to the prompt. Treat decision guides and governance patterns as principle guidance when no file is explicitly typed as a principle.
-5. Read the full `patterns/*.md` files for each candidate before judging. Include `related` patterns when the loaded pattern names them and the relationship is relevant to the user's question.
-6. If no subject-group entry or pattern file plausibly matches the prompt, respond exactly:
+4. Perform the cross-domain fan-out pass below before finalizing candidates. This is required for design reviews, alignment scoring, architecture critique, modernization, migration, and standardization prompts.
+5. Collect all candidate patterns, anti-patterns, governance patterns, and decision guides that plausibly relate to the prompt. Treat decision guides and governance patterns as principle guidance when no file is explicitly typed as a principle.
+6. Read the full `patterns/*.md` files for each candidate before judging. Include `related` patterns when the loaded pattern names them and the relationship is relevant to the user's question.
+7. If no subject-group entry or pattern file plausibly matches the prompt, respond exactly:
 
 ```text
 no matching context
 ```
 
 Do not provide generic advice after returning `no matching context`.
+
+## Cross-Domain Fan-Out
+
+Do not stop at the first obvious technology family. After direct matches are found, explicitly consider every pattern family represented by candidate ids in the corpus, normally `iac`, `ddd`, `data`, and `platform`.
+
+- `iac`: Terraform, infrastructure-as-code, modules, stacks, environments, state, drift, pipelines, policy, reproducibility, change safety.
+- `ddd`: business units, teams, ownership, inconsistent terminology, lifecycle names, migration from local or legacy models, standardization across autonomous groups, bounded contexts, context maps, ubiquitous language.
+- `data`: SQL, storage, stateful migration, data continuity, consistency, replication, recovery, schema/data contracts, analytical or operational data flows.
+- `platform`: platform operating model, shared services, golden paths, reusable operational components, Kubernetes, containers, sidecars/adapters, observability normalization, service discovery.
+
+For each family:
+
+1. Identify whether the prompt has direct, adjacent, weak, or no trigger signals.
+2. Include references from families with direct or adjacent trigger signals, even when the main technology belongs to another family.
+3. Include weaker candidates only when they could reveal an important risk the primary lens would miss; mark them as potential.
+4. Exclude a family only after checking group entries, tags, summaries, and relevant `related` links; record the reason in `Lens Coverage`.
+
+The goal is broad review without pattern dumping: make the agent prove adjacent lenses were considered, not force every family into every answer.
 
 ## Relevance Rules
 
@@ -57,6 +76,7 @@ When matching context exists, structure the answer around the references, not ar
 
 Always include:
 
+- `Lens Coverage`: state the primary lens, adjacent lenses included, potential lenses included, and lenses considered but excluded with a brief reason.
 - `Matching Context`: cite every selected reference by id, title, type, and source path.
 - `Relationships`: explicitly state why each reference was selected, including subject group, matching tags or terms, and related-pattern links when relevant.
 - `Alignment Review`: for each reference, state the 1-100 alignment score, where the user prompt aligns, where it misaligns or is unclear, and a small recommendation to align more closely.
