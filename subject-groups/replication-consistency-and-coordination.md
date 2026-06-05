@@ -1,6 +1,14 @@
 # Replication Consistency And Coordination
 
-Pattern count: 25
+Pattern count: 27
+
+## Aggregate Lifecycle Boundary
+
+- `id`: `ddd.aggregate-lifecycle-boundary`
+- `type`: `architecture-pattern`
+- `source`: `patterns/aggregate-lifecycle-boundary.md`
+- `tags`: `domain-driven-design`, `aggregates`, `consistency`, `transactions`, `data-modeling`, `lifecycle-management`
+- `summary`: Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects.
 
 ## Cluster Per Environment
 
@@ -81,6 +89,14 @@ Pattern count: 25
 - `source`: `patterns/isolation-level-explicitness.md`
 - `tags`: `data-systems`, `transactions`, `isolation-levels`, `consistency`, `implementation-planning`, `cloud-agnostic`
 - `summary`: Choose isolation levels by the anomalies the application can tolerate, not by database defaults or ACID labels.
+
+## Layered Domain Architecture
+
+- `id`: `ddd.layered-domain-architecture`
+- `type`: `architecture-pattern`
+- `source`: `patterns/layered-domain-architecture.md`
+- `tags`: `domain-driven-design`, `layered-architecture`, `domain-layer`, `separation-of-concerns`, `modular-architecture`, `testability`
+- `summary`: Isolate domain logic from UI, application coordination, and infrastructure so the model can stay expressive and testable.
 
 ## Leader Election Safety
 

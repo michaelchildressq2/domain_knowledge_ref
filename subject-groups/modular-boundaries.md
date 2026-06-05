@@ -1,6 +1,6 @@
 # Modular Boundaries
 
-Pattern count: 38
+Pattern count: 43
 
 ## Adapter Operability Normalization
 
@@ -10,6 +10,14 @@ Pattern count: 38
 - `tags`: `platform-engineering`, `sre`, `observability`, `operability`, `modular-architecture`, `runtime-operations`, `implementation-planning`, `module-boundaries`, `testing`, `kubernetes`, `adapter`
 - `summary`: Use an adapter container to translate heterogeneous application interfaces into standard operational contracts for metrics, logs, health, or control planes.
 
+## Aggregate Lifecycle Boundary
+
+- `id`: `ddd.aggregate-lifecycle-boundary`
+- `type`: `architecture-pattern`
+- `source`: `patterns/aggregate-lifecycle-boundary.md`
+- `tags`: `domain-driven-design`, `aggregates`, `consistency`, `transactions`, `data-modeling`, `lifecycle-management`
+- `summary`: Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects.
+
 ## Ambassador Local Service Broker
 
 - `id`: `platform.ambassador-local-service-broker`
@@ -17,6 +25,22 @@ Pattern count: 38
 - `source`: `patterns/ambassador-local-service-broker.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `modular-architecture`, `scalability`, `safe-change`, `migration`, `runtime-operations`, `module-boundaries`, `parameterization`, `kubernetes`, `service-discovery`, `ambassador`
 - `summary`: Put service discovery, sharding, request splitting, or environment-specific brokering behind a local endpoint so application code can remain simple and portable.
+
+## Anti-Corruption Layer
+
+- `id`: `ddd.anti-corruption-layer`
+- `type`: `architecture-pattern`
+- `source`: `patterns/anti-corruption-layer.md`
+- `tags`: `domain-driven-design`, `anti-corruption-layer`, `integration`, `legacy-modernization`, `bounded-context`, `modular-architecture`
+- `summary`: Protect a clean domain model from external or legacy models by translating at an explicit boundary.
+
+## Bounded Context Integrity
+
+- `id`: `ddd.bounded-context-integrity`
+- `type`: `architecture-pattern`
+- `source`: `patterns/bounded-context-integrity.md`
+- `tags`: `domain-driven-design`, `bounded-context`, `model-integrity`, `modular-architecture`, `module-boundaries`, `data-contracts`, `team-boundaries`, `integration`
+- `summary`: Define where each model applies and keep that context internally consistent through language, ownership, integration, and tests.
 
 ## Cluster As Code
 
@@ -65,6 +89,14 @@ Pattern count: 38
 - `source`: `patterns/copy-paste-environments.md`
 - `tags`: `infrastructure-as-code`, `anti-pattern`, `environment-parity`, `configuration-drift`, `stack-design`, `cloud-agnostic`
 - `summary`: Duplicating stack source per environment creates short-term isolation but long-term drift and delivery overhead.
+
+## Core Domain Distillation
+
+- `id`: `ddd.core-domain-distillation`
+- `type`: `decision-guide`
+- `source`: `patterns/core-domain-distillation.md`
+- `tags`: `domain-driven-design`, `core-domain`, `subdomains`, `prioritization`, `architecture-strategy`, `module-boundaries`, `maintainability`, `design-review`
+- `summary`: Concentrate design talent and model clarity on the parts of the domain that create strategic advantage.
 
 ## Correctness Before Preservation
 
@@ -129,6 +161,14 @@ Pattern count: 38
 - `source`: `patterns/lease-based-ownership-election.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `high-availability`, `data-consistency`, `operability`, `design-review`, `runtime-operations`, `idempotency`, `testing`, `kubernetes`, `leader-election`
 - `summary`: Elect one active owner among replicas with consensus-backed compare-and-swap, renewable leases, and fencing checks before protected actions.
+
+## Model Driven Design
+
+- `id`: `ddd.model-driven-design`
+- `type`: `architecture-pattern`
+- `source`: `patterns/model-driven-design.md`
+- `tags`: `domain-driven-design`, `domain-modeling`, `software-design`, `implementation-planning`, `module-boundaries`, `maintainability`, `refactoring`, `design-review`
+- `summary`: Keep the core design and implementation closely mapped to the domain model so analysis and code evolve together.
 
 ## Monolithic Stack
 

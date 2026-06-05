@@ -167,6 +167,23 @@
         "summary": "Continuously verify derived data against source facts to detect corruption, missed events, and broken assumptions."
       },
       {
+        "id": "ddd.knowledge-crunching-loop",
+        "title": "Knowledge Crunching Loop",
+        "type": "practice",
+        "path": "patterns/knowledge-crunching-loop.md",
+        "tags": [
+          "domain-driven-design",
+          "domain-modeling",
+          "requirements-discovery",
+          "collaboration",
+          "iterative-design",
+          "feedback",
+          "testing",
+          "design-review"
+        ],
+        "summary": "Iterate with domain experts until terminology, scenarios, code, and model structure expose useful domain knowledge."
+      },
+      {
         "id": "iac.apply-code-continuously",
         "title": "Apply Code Continuously",
         "type": "delivery-pattern",
@@ -1091,6 +1108,53 @@
         "summary": "Choose storage engines by write/read mix, update pattern, range-query needs, and compaction behavior."
       },
       {
+        "id": "ddd.bounded-context-integrity",
+        "title": "Bounded Context Integrity",
+        "type": "architecture-pattern",
+        "path": "patterns/bounded-context-integrity.md",
+        "tags": [
+          "domain-driven-design",
+          "bounded-context",
+          "model-integrity",
+          "modular-architecture",
+          "module-boundaries",
+          "data-contracts",
+          "team-boundaries",
+          "integration"
+        ],
+        "summary": "Define where each model applies and keep that context internally consistent through language, ownership, integration, and tests."
+      },
+      {
+        "id": "ddd.specification-business-rules",
+        "title": "Specification Business Rules",
+        "type": "architecture-pattern",
+        "path": "patterns/specification-business-rules.md",
+        "tags": [
+          "domain-driven-design",
+          "business-rules",
+          "specifications",
+          "query-patterns",
+          "domain-modeling",
+          "declarative-design"
+        ],
+        "summary": "Represent important predicates and selection rules as named, composable domain concepts instead of scattering conditionals."
+      },
+      {
+        "id": "ddd.supple-domain-design",
+        "title": "Supple Domain Design",
+        "type": "architecture-pattern",
+        "path": "patterns/supple-domain-design.md",
+        "tags": [
+          "domain-driven-design",
+          "software-design",
+          "code-readability",
+          "refactoring",
+          "testability",
+          "design-review"
+        ],
+        "summary": "Shape important domain code so intention, effects, assertions, and conceptual boundaries are obvious to client developers and maintainers."
+      },
+      {
         "id": "iac.apply-on-change-antipattern",
         "title": "Apply On Change",
         "type": "anti-pattern",
@@ -1730,6 +1794,51 @@
         "summary": "Compose specialized storage and processing systems by deriving views from a durable source of truth instead of forcing one database to do everything."
       },
       {
+        "id": "ddd.aggregate-lifecycle-boundary",
+        "title": "Aggregate Lifecycle Boundary",
+        "type": "architecture-pattern",
+        "path": "patterns/aggregate-lifecycle-boundary.md",
+        "tags": [
+          "domain-driven-design",
+          "aggregates",
+          "consistency",
+          "transactions",
+          "data-modeling",
+          "lifecycle-management"
+        ],
+        "summary": "Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects."
+      },
+      {
+        "id": "ddd.specification-business-rules",
+        "title": "Specification Business Rules",
+        "type": "architecture-pattern",
+        "path": "patterns/specification-business-rules.md",
+        "tags": [
+          "domain-driven-design",
+          "business-rules",
+          "specifications",
+          "query-patterns",
+          "domain-modeling",
+          "declarative-design"
+        ],
+        "summary": "Represent important predicates and selection rules as named, composable domain concepts instead of scattering conditionals."
+      },
+      {
+        "id": "ddd.ubiquitous-language",
+        "title": "Ubiquitous Language",
+        "type": "practice",
+        "path": "patterns/ubiquitous-language.md",
+        "tags": [
+          "domain-driven-design",
+          "domain-modeling",
+          "collaboration",
+          "terminology",
+          "code-readability",
+          "design-review"
+        ],
+        "summary": "Use the domain model as the shared language in speech, diagrams, tests, documents, and code."
+      },
+      {
         "id": "iac.data-continuity-strategy",
         "title": "Data Continuity Strategy",
         "type": "architecture-pattern",
@@ -1839,6 +1948,87 @@
           "cloud-agnostic"
         ],
         "summary": "Use transactions where they simplify correctness, but keep boundaries aligned with invariants and operational cost."
+      },
+      {
+        "id": "ddd.aggregate-lifecycle-boundary",
+        "title": "Aggregate Lifecycle Boundary",
+        "type": "architecture-pattern",
+        "path": "patterns/aggregate-lifecycle-boundary.md",
+        "tags": [
+          "domain-driven-design",
+          "aggregates",
+          "consistency",
+          "transactions",
+          "data-modeling",
+          "lifecycle-management"
+        ],
+        "summary": "Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects."
+      },
+      {
+        "id": "ddd.anti-corruption-layer",
+        "title": "Anti-Corruption Layer",
+        "type": "architecture-pattern",
+        "path": "patterns/anti-corruption-layer.md",
+        "tags": [
+          "domain-driven-design",
+          "anti-corruption-layer",
+          "integration",
+          "legacy-modernization",
+          "bounded-context",
+          "modular-architecture"
+        ],
+        "summary": "Protect a clean domain model from external or legacy models by translating at an explicit boundary."
+      },
+      {
+        "id": "ddd.bounded-context-integrity",
+        "title": "Bounded Context Integrity",
+        "type": "architecture-pattern",
+        "path": "patterns/bounded-context-integrity.md",
+        "tags": [
+          "domain-driven-design",
+          "bounded-context",
+          "model-integrity",
+          "modular-architecture",
+          "module-boundaries",
+          "data-contracts",
+          "team-boundaries",
+          "integration"
+        ],
+        "summary": "Define where each model applies and keep that context internally consistent through language, ownership, integration, and tests."
+      },
+      {
+        "id": "ddd.core-domain-distillation",
+        "title": "Core Domain Distillation",
+        "type": "decision-guide",
+        "path": "patterns/core-domain-distillation.md",
+        "tags": [
+          "domain-driven-design",
+          "core-domain",
+          "subdomains",
+          "prioritization",
+          "architecture-strategy",
+          "module-boundaries",
+          "maintainability",
+          "design-review"
+        ],
+        "summary": "Concentrate design talent and model clarity on the parts of the domain that create strategic advantage."
+      },
+      {
+        "id": "ddd.model-driven-design",
+        "title": "Model Driven Design",
+        "type": "architecture-pattern",
+        "path": "patterns/model-driven-design.md",
+        "tags": [
+          "domain-driven-design",
+          "domain-modeling",
+          "software-design",
+          "implementation-planning",
+          "module-boundaries",
+          "maintainability",
+          "refactoring",
+          "design-review"
+        ],
+        "summary": "Keep the core design and implementation closely mapped to the domain model so analysis and code evolve together."
       },
       {
         "id": "iac.cluster-as-code",
@@ -4544,6 +4734,36 @@
         "summary": "Use transactions where they simplify correctness, but keep boundaries aligned with invariants and operational cost."
       },
       {
+        "id": "ddd.aggregate-lifecycle-boundary",
+        "title": "Aggregate Lifecycle Boundary",
+        "type": "architecture-pattern",
+        "path": "patterns/aggregate-lifecycle-boundary.md",
+        "tags": [
+          "domain-driven-design",
+          "aggregates",
+          "consistency",
+          "transactions",
+          "data-modeling",
+          "lifecycle-management"
+        ],
+        "summary": "Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects."
+      },
+      {
+        "id": "ddd.layered-domain-architecture",
+        "title": "Layered Domain Architecture",
+        "type": "architecture-pattern",
+        "path": "patterns/layered-domain-architecture.md",
+        "tags": [
+          "domain-driven-design",
+          "layered-architecture",
+          "domain-layer",
+          "separation-of-concerns",
+          "modular-architecture",
+          "testability"
+        ],
+        "summary": "Isolate domain logic from UI, application coordination, and infrastructure so the model can stay expressive and testable."
+      },
+      {
         "id": "iac.cluster-per-environment",
         "title": "Cluster Per Environment",
         "type": "architecture-pattern",
@@ -5148,6 +5368,40 @@
           "cloud-agnostic"
         ],
         "summary": "Continuously verify derived data against source facts to detect corruption, missed events, and broken assumptions."
+      },
+      {
+        "id": "ddd.core-domain-distillation",
+        "title": "Core Domain Distillation",
+        "type": "decision-guide",
+        "path": "patterns/core-domain-distillation.md",
+        "tags": [
+          "domain-driven-design",
+          "core-domain",
+          "subdomains",
+          "prioritization",
+          "architecture-strategy",
+          "module-boundaries",
+          "maintainability",
+          "design-review"
+        ],
+        "summary": "Concentrate design talent and model clarity on the parts of the domain that create strategic advantage."
+      },
+      {
+        "id": "ddd.model-driven-design",
+        "title": "Model Driven Design",
+        "type": "architecture-pattern",
+        "path": "patterns/model-driven-design.md",
+        "tags": [
+          "domain-driven-design",
+          "domain-modeling",
+          "software-design",
+          "implementation-planning",
+          "module-boundaries",
+          "maintainability",
+          "refactoring",
+          "design-review"
+        ],
+        "summary": "Keep the core design and implementation closely mapped to the domain model so analysis and code evolve together."
       },
       {
         "id": "iac.cluster-per-environment",

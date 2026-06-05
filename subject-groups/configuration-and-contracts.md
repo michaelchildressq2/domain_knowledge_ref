@@ -1,6 +1,6 @@
 # Configuration And Contracts
 
-Pattern count: 35
+Pattern count: 38
 
 ## Adapter Operability Normalization
 
@@ -25,6 +25,14 @@ Pattern count: 35
 - `source`: `patterns/apply-on-change-antipattern.md`
 - `tags`: `infrastructure-as-code`, `anti-pattern`, `configuration-drift`, `runtime-operations`, `safe-change`, `cloud-agnostic`
 - `summary`: Applying configuration only for selected changes lets unmanaged drift accumulate and makes future changes unpredictable.
+
+## Bounded Context Integrity
+
+- `id`: `ddd.bounded-context-integrity`
+- `type`: `architecture-pattern`
+- `source`: `patterns/bounded-context-integrity.md`
+- `tags`: `domain-driven-design`, `bounded-context`, `model-integrity`, `modular-architecture`, `module-boundaries`, `data-contracts`, `team-boundaries`, `integration`
+- `summary`: Define where each model applies and keep that context internally consistent through language, ownership, integration, and tests.
 
 ## Compatible Schema Evolution
 
@@ -250,6 +258,14 @@ Pattern count: 35
 - `tags`: `infrastructure-as-code`, `anti-pattern`, `configuration-drift`, `reproducibility`, `runtime-operations`, `cloud-agnostic`
 - `summary`: A snowflake system is manually unique, hard to reproduce, and risky to change or recover.
 
+## Specification Business Rules
+
+- `id`: `ddd.specification-business-rules`
+- `type`: `architecture-pattern`
+- `source`: `patterns/specification-business-rules.md`
+- `tags`: `domain-driven-design`, `business-rules`, `specifications`, `query-patterns`, `domain-modeling`, `declarative-design`
+- `summary`: Represent important predicates and selection rules as named, composable domain concepts instead of scattering conditionals.
+
 ## Stack Data Lookup
 
 - `id`: `iac.stack-data-lookup`
@@ -273,6 +289,14 @@ Pattern count: 35
 - `source`: `patterns/storage-engine-fit.md`
 - `tags`: `data-systems`, `storage-engine`, `database`, `performance`, `design-review`, `cloud-agnostic`
 - `summary`: Choose storage engines by write/read mix, update pattern, range-query needs, and compaction behavior.
+
+## Supple Domain Design
+
+- `id`: `ddd.supple-domain-design`
+- `type`: `architecture-pattern`
+- `source`: `patterns/supple-domain-design.md`
+- `tags`: `domain-driven-design`, `software-design`, `code-readability`, `refactoring`, `testability`, `design-review`
+- `summary`: Shape important domain code so intention, effects, assertions, and conceptual boundaries are obvious to client developers and maintainers.
 
 ## Version Controlled Infrastructure
 

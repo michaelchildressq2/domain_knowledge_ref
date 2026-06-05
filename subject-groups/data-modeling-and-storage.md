@@ -1,6 +1,14 @@
 # Data Modeling And Storage
 
-Pattern count: 18
+Pattern count: 21
+
+## Aggregate Lifecycle Boundary
+
+- `id`: `ddd.aggregate-lifecycle-boundary`
+- `type`: `architecture-pattern`
+- `source`: `patterns/aggregate-lifecycle-boundary.md`
+- `tags`: `domain-driven-design`, `aggregates`, `consistency`, `transactions`, `data-modeling`, `lifecycle-management`
+- `summary`: Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects.
 
 ## Analytical Column Storage
 
@@ -122,6 +130,14 @@ Pattern count: 18
 - `tags`: `data-systems`, `data-modeling`, `database`, `design-review`, `cloud-agnostic`
 - `summary`: Choose storage and query models based on access patterns, relationships, consistency needs, and evolution costs.
 
+## Specification Business Rules
+
+- `id`: `ddd.specification-business-rules`
+- `type`: `architecture-pattern`
+- `source`: `patterns/specification-business-rules.md`
+- `tags`: `domain-driven-design`, `business-rules`, `specifications`, `query-patterns`, `domain-modeling`, `declarative-design`
+- `summary`: Represent important predicates and selection rules as named, composable domain concepts instead of scattering conditionals.
+
 ## Storage Engine Fit
 
 - `id`: `data.storage-engine-fit`
@@ -137,6 +153,14 @@ Pattern count: 18
 - `source`: `patterns/transaction-boundary-fit.md`
 - `tags`: `data-systems`, `transactions`, `consistency`, `database`, `design-review`, `cloud-agnostic`
 - `summary`: Use transactions where they simplify correctness, but keep boundaries aligned with invariants and operational cost.
+
+## Ubiquitous Language
+
+- `id`: `ddd.ubiquitous-language`
+- `type`: `practice`
+- `source`: `patterns/ubiquitous-language.md`
+- `tags`: `domain-driven-design`, `domain-modeling`, `collaboration`, `terminology`, `code-readability`, `design-review`
+- `summary`: Use the domain model as the shared language in speech, diagrams, tests, documents, and code.
 
 ## Unbundled Derived Data
 

@@ -1,6 +1,6 @@
 # Change And Delivery
 
-Pattern count: 59
+Pattern count: 60
 
 ## Adapter Operability Normalization
 
@@ -177,6 +177,14 @@ Pattern count: 59
 - `source`: `patterns/immutable-server-image.md`
 - `tags`: `infrastructure-as-code`, `immutability`, `server-images`, `safe-change`, `runtime-operations`, `cloud-agnostic`
 - `summary`: Prefer replacing servers from updated images over mutating long-lived servers when the platform and workload support it.
+
+## Knowledge Crunching Loop
+
+- `id`: `ddd.knowledge-crunching-loop`
+- `type`: `practice`
+- `source`: `patterns/knowledge-crunching-loop.md`
+- `tags`: `domain-driven-design`, `domain-modeling`, `requirements-discovery`, `collaboration`, `iterative-design`, `feedback`, `testing`, `design-review`
+- `summary`: Iterate with domain experts until terminology, scenarios, code, and model structure expose useful domain knowledge.
 
 ## Lease Based Ownership Election
 

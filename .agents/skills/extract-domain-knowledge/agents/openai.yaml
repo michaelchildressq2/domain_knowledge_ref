@@ -1,0 +1,7 @@
+interface:
+  display_name: "Extract Domain Knowledge"
+  short_description: "Ingest documents into the pattern corpus"
+  default_prompt: "Use $extract-domain-knowledge to ingest this source document into the local pattern corpus."
+
+policy:
+  allow_implicit_invocation: true

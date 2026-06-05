@@ -1,6 +1,6 @@
 # System Qualities
 
-Pattern count: 38
+Pattern count: 40
 
 ## Adapter Operability Normalization
 
@@ -65,6 +65,14 @@ Pattern count: 38
 - `source`: `patterns/coordinated-batch-aggregation.md`
 - `tags`: `platform-engineering`, `data-platform`, `data-consistency`, `scalability`, `operability`, `design-review`, `runtime-operations`, `testing`, `idempotency`, `batch-processing`, `aggregation`
 - `summary`: Use join barriers and reduce stages when parallel batch outputs must be made complete or aggregated into final results.
+
+## Core Domain Distillation
+
+- `id`: `ddd.core-domain-distillation`
+- `type`: `decision-guide`
+- `source`: `patterns/core-domain-distillation.md`
+- `tags`: `domain-driven-design`, `core-domain`, `subdomains`, `prioritization`, `architecture-strategy`, `module-boundaries`, `maintainability`, `design-review`
+- `summary`: Concentrate design talent and model clarity on the parts of the domain that create strategic advantage.
 
 ## Correctness Before Preservation
 
@@ -161,6 +169,14 @@ Pattern count: 38
 - `source`: `patterns/minimize-variation.md`
 - `tags`: `infrastructure-as-code`, `environment-parity`, `configuration-management`, `drift-prevention`, `operability`, `cloud-agnostic`
 - `summary`: Keep instances that serve the same purpose as similar as possible to reduce drift, testing burden, and operational surprise.
+
+## Model Driven Design
+
+- `id`: `ddd.model-driven-design`
+- `type`: `architecture-pattern`
+- `source`: `patterns/model-driven-design.md`
+- `tags`: `domain-driven-design`, `domain-modeling`, `software-design`, `implementation-planning`, `module-boundaries`, `maintainability`, `refactoring`, `design-review`
+- `summary`: Keep the core design and implementation closely mapped to the domain model so analysis and code evolve together.
 
 ## Monolithic Stack
 
