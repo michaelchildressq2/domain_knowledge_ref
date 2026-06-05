@@ -1,0 +1,7 @@
+interface:
+  display_name: "Chapter Pattern Extractor"
+  short_description: "Extract tagged patterns from chapters"
+  default_prompt: "Use $chapter-pattern-extractor to turn this chapter folder into tagged pattern markdown files."
+
+policy:
+  allow_implicit_invocation: true

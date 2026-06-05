@@ -1,0 +1,7 @@
+interface:
+  display_name: "Infrastructure as Code Patterns"
+  short_description: "Tagged IaC pattern reference"
+  default_prompt: "Use $infrastructure-as-code-patterns to review this infrastructure design and suggest applicable patterns."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pattern Subject Grouper"
+  short_description: "Group pattern files by subject"
+  default_prompt: "Use $pattern-subject-grouper to group these pattern folders into common subject matter areas."
