@@ -1,6 +1,6 @@
 # System Qualities
 
-Pattern count: 41
+Pattern count: 47
 
 ## Adapter Operability Normalization
 
@@ -25,6 +25,54 @@ Pattern count: 41
 - `source`: `patterns/analytical-column-storage.md`
 - `tags`: `data-systems`, `analytics`, `storage-engine`, `data-warehouse`, `performance`, `cloud-agnostic`
 - `summary`: Use column-oriented storage for analytical workloads that scan many rows but only a subset of columns.
+
+## Ansible Cloud Dynamic Inventory
+
+- `id`: `iac.ansible-cloud-dynamic-inventory`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-cloud-dynamic-inventory.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `cloud`, `dynamic-inventory`, `tagging`, `runtime-operations`, `scalability`
+- `summary`: Drive Ansible cloud runs from provider inventory plugins, resource tags, and cache controls instead of hand-maintained host lists.
+
+## Ansible Molecule Role Quality Gate
+
+- `id`: `iac.ansible-molecule-role-quality-gate`
+- `type`: `testing-practice`
+- `source`: `patterns/ansible-molecule-role-quality-gate.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `molecule`, `testing`, `ci-cd`, `linting`, `roles`
+- `summary`: Use Molecule scenarios, linters, dependency installation, convergence, cleanup, and verifiers as the standard quality gate for reusable Ansible roles.
+
+## Ansible Performance Tuning Budget
+
+- `id`: `iac.ansible-performance-tuning-budget`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-performance-tuning-budget.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `performance`, `scalability`, `runtime-operations`, `ssh`, `fact-caching`
+- `summary`: Tune Ansible performance only after identifying the dominant cost, then use connection reuse, pipelining, forks, fact strategy, and caching with explicit risk controls.
+
+## Ansible Playbook Convergence
+
+- `id`: `iac.ansible-playbook-convergence`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-playbook-convergence.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `idempotency`, `desired-state`, `configuration-management`, `drift-prevention`, `operability`
+- `summary`: Write Ansible playbooks as readable desired-state workflows that can be re-run safely, report real changes, and avoid unnecessary imperative shell logic.
+
+## Ansible Progressive Orchestration
+
+- `id`: `iac.ansible-progressive-orchestration`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-progressive-orchestration.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `orchestration`, `progressive-delivery`, `runtime-operations`, `high-availability`, `delivery-pipeline`
+- `summary`: Use host patterns, serial batches, delegation, tags, blocks, and handlers to make multi-host Ansible changes staged, inspectable, and recoverable.
+
+## Ansible Variable Precedence Contract
+
+- `id`: `iac.ansible-variable-precedence-contract`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-variable-precedence-contract.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `configuration-management`, `parameterization`, `variable-precedence`, `secrets-management`, `operability`
+- `summary`: Treat Ansible variable sources and precedence as an explicit contract so defaults, inventory values, secrets, facts, and overrides do not silently fight each other.
 
 ## Backpressure For Streams
 

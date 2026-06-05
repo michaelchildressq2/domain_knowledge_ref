@@ -1,6 +1,6 @@
 # Change And Delivery
 
-Pattern count: 70
+Pattern count: 79
 
 ## Adapter Operability Normalization
 
@@ -17,6 +17,78 @@ Pattern count: 70
 - `source`: `patterns/ambassador-local-service-broker.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `modular-architecture`, `scalability`, `safe-change`, `migration`, `runtime-operations`, `module-boundaries`, `parameterization`, `kubernetes`, `service-discovery`, `ambassador`
 - `summary`: Put service discovery, sharding, request splitting, or environment-specific brokering behind a local endpoint so application code can remain simple and portable.
+
+## Ansible Collection Dependency Manifest
+
+- `id`: `iac.ansible-collection-dependency-manifest`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-collection-dependency-manifest.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `collections`, `dependency-management`, `versioning`, `modules`, `packaging`
+- `summary`: Use Ansible collections and dependency manifests to package modules, roles, plugins, and playbooks as versioned content with explicit fully qualified dependencies.
+
+## Ansible Control Node Dependency Isolation
+
+- `id`: `iac.ansible-control-node-dependency-isolation`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-control-node-dependency-isolation.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `dependency-management`, `reproducibility`, `python`, `ci-cd`, `platform-engineering`
+- `summary`: Isolate Ansible, Python, collection, and control-node dependencies per project so playbook behavior is reproducible across contributors and automation runners.
+
+## Ansible Custom Module Boundary
+
+- `id`: `iac.ansible-custom-module-boundary`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-custom-module-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `modules`, `extensibility`, `idempotency`, `testing`, `api-integration`
+- `summary`: Create a custom Ansible module when desired-state behavior, validation, check mode, and change reporting are too important or complex for shell tasks or roles.
+
+## Ansible Debugging Feedback Loop
+
+- `id`: `iac.ansible-debugging-feedback-loop`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-debugging-feedback-loop.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `debugging`, `observability`, `runtime-operations`, `testing`, `feedback-loop`
+- `summary`: Diagnose Ansible failures by narrowing the failing assumption with inventory inspection, verbosity, check mode, tags, debug output, and direct remote verification.
+
+## Ansible Image Build Handoff
+
+- `id`: `iac.ansible-image-build-handoff`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-image-build-handoff.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `image-building`, `packer`, `immutable-infrastructure`, `delivery-pipeline`, `reproducibility`
+- `summary`: Use Ansible inside image-building workflows to configure base images once, then hand runtime variation to inventory, variables, and deployment automation.
+
+## Ansible Molecule Role Quality Gate
+
+- `id`: `iac.ansible-molecule-role-quality-gate`
+- `type`: `testing-practice`
+- `source`: `patterns/ansible-molecule-role-quality-gate.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `molecule`, `testing`, `ci-cd`, `linting`, `roles`
+- `summary`: Use Molecule scenarios, linters, dependency installation, convergence, cleanup, and verifiers as the standard quality gate for reusable Ansible roles.
+
+## Ansible Playbook Convergence
+
+- `id`: `iac.ansible-playbook-convergence`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-playbook-convergence.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `idempotency`, `desired-state`, `configuration-management`, `drift-prevention`, `operability`
+- `summary`: Write Ansible playbooks as readable desired-state workflows that can be re-run safely, report real changes, and avoid unnecessary imperative shell logic.
+
+## Ansible Progressive Orchestration
+
+- `id`: `iac.ansible-progressive-orchestration`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-progressive-orchestration.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `orchestration`, `progressive-delivery`, `runtime-operations`, `high-availability`, `delivery-pipeline`
+- `summary`: Use host patterns, serial batches, delegation, tags, blocks, and handlers to make multi-host Ansible changes staged, inspectable, and recoverable.
+
+## Ansible Role Capability Boundary
+
+- `id`: `iac.ansible-role-capability-boundary`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-role-capability-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `roles`, `module-boundaries`, `composability`, `versioning`, `testing`
+- `summary`: Design Ansible roles as small, documented, versioned capabilities with clear defaults, dependencies, handlers, and test scenarios.
 
 ## Apply Code Continuously
 

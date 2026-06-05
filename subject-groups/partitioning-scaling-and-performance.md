@@ -1,6 +1,6 @@
 # Partitioning Scaling And Performance
 
-Pattern count: 22
+Pattern count: 24
 
 ## Ambassador Local Service Broker
 
@@ -17,6 +17,22 @@ Pattern count: 22
 - `source`: `patterns/analytical-column-storage.md`
 - `tags`: `data-systems`, `analytics`, `storage-engine`, `data-warehouse`, `performance`, `cloud-agnostic`
 - `summary`: Use column-oriented storage for analytical workloads that scan many rows but only a subset of columns.
+
+## Ansible Cloud Dynamic Inventory
+
+- `id`: `iac.ansible-cloud-dynamic-inventory`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-cloud-dynamic-inventory.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `cloud`, `dynamic-inventory`, `tagging`, `runtime-operations`, `scalability`
+- `summary`: Drive Ansible cloud runs from provider inventory plugins, resource tags, and cache controls instead of hand-maintained host lists.
+
+## Ansible Performance Tuning Budget
+
+- `id`: `iac.ansible-performance-tuning-budget`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-performance-tuning-budget.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `performance`, `scalability`, `runtime-operations`, `ssh`, `fact-caching`
+- `summary`: Tune Ansible performance only after identifying the dominant cost, then use connection reuse, pipelining, forks, fact strategy, and caching with explicit risk controls.
 
 ## Backpressure For Streams
 

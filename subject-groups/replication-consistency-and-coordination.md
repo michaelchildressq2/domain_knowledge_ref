@@ -1,6 +1,6 @@
 # Replication Consistency And Coordination
 
-Pattern count: 30
+Pattern count: 32
 
 ## Aggregate Lifecycle Boundary
 
@@ -9,6 +9,22 @@ Pattern count: 30
 - `source`: `patterns/aggregate-lifecycle-boundary.md`
 - `tags`: `domain-driven-design`, `aggregates`, `consistency`, `transactions`, `data-modeling`, `lifecycle-management`
 - `summary`: Use aggregate roots to define consistency, reference, transaction, creation, retrieval, and deletion boundaries for domain objects.
+
+## Ansible Control Node Dependency Isolation
+
+- `id`: `iac.ansible-control-node-dependency-isolation`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-control-node-dependency-isolation.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `dependency-management`, `reproducibility`, `python`, `ci-cd`, `platform-engineering`
+- `summary`: Isolate Ansible, Python, collection, and control-node dependencies per project so playbook behavior is reproducible across contributors and automation runners.
+
+## Ansible Progressive Orchestration
+
+- `id`: `iac.ansible-progressive-orchestration`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-progressive-orchestration.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `orchestration`, `progressive-delivery`, `runtime-operations`, `high-availability`, `delivery-pipeline`
+- `summary`: Use host patterns, serial batches, delegation, tags, blocks, and handlers to make multi-host Ansible changes staged, inspectable, and recoverable.
 
 ## Cluster Per Environment
 

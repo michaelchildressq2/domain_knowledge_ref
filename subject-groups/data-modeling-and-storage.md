@@ -1,6 +1,6 @@
 # Data Modeling And Storage
 
-Pattern count: 23
+Pattern count: 24
 
 ## Aggregate Lifecycle Boundary
 
@@ -17,6 +17,14 @@ Pattern count: 23
 - `source`: `patterns/analytical-column-storage.md`
 - `tags`: `data-systems`, `analytics`, `storage-engine`, `data-warehouse`, `performance`, `cloud-agnostic`
 - `summary`: Use column-oriented storage for analytical workloads that scan many rows but only a subset of columns.
+
+## Ansible Role Capability Boundary
+
+- `id`: `iac.ansible-role-capability-boundary`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-role-capability-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `roles`, `module-boundaries`, `composability`, `versioning`, `testing`
+- `summary`: Design Ansible roles as small, documented, versioned capabilities with clear defaults, dependencies, handlers, and test scenarios.
 
 ## Batch Derived Views
 

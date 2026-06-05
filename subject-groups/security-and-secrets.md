@@ -1,6 +1,30 @@
 # Security And Secrets
 
-Pattern count: 17
+Pattern count: 20
+
+## Ansible Control Node Dependency Isolation
+
+- `id`: `iac.ansible-control-node-dependency-isolation`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-control-node-dependency-isolation.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `dependency-management`, `reproducibility`, `python`, `ci-cd`, `platform-engineering`
+- `summary`: Isolate Ansible, Python, collection, and control-node dependencies per project so playbook behavior is reproducible across contributors and automation runners.
+
+## Ansible Variable Precedence Contract
+
+- `id`: `iac.ansible-variable-precedence-contract`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-variable-precedence-contract.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `configuration-management`, `parameterization`, `variable-precedence`, `secrets-management`, `operability`
+- `summary`: Treat Ansible variable sources and precedence as an explicit contract so defaults, inventory values, secrets, facts, and overrides do not silently fight each other.
+
+## Ansible Vault Secret Boundary
+
+- `id`: `iac.ansible-vault-secret-boundary`
+- `type`: `security-pattern`
+- `source`: `patterns/ansible-vault-secret-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `secrets-management`, `ansible-vault`, `least-privilege`, `configuration-management`, `security`
+- `summary`: Keep Ansible secrets separate from ordinary inventory and encrypt or externally source them so credentials stay reviewable, scoped, and usable in automation.
 
 ## Cluster Per Environment
 

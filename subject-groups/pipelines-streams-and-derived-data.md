@@ -1,6 +1,30 @@
 # Pipelines Streams And Derived Data
 
-Pattern count: 44
+Pattern count: 47
+
+## Ansible Image Build Handoff
+
+- `id`: `iac.ansible-image-build-handoff`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-image-build-handoff.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `image-building`, `packer`, `immutable-infrastructure`, `delivery-pipeline`, `reproducibility`
+- `summary`: Use Ansible inside image-building workflows to configure base images once, then hand runtime variation to inventory, variables, and deployment automation.
+
+## Ansible Playbook Convergence
+
+- `id`: `iac.ansible-playbook-convergence`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-playbook-convergence.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `idempotency`, `desired-state`, `configuration-management`, `drift-prevention`, `operability`
+- `summary`: Write Ansible playbooks as readable desired-state workflows that can be re-run safely, report real changes, and avoid unnecessary imperative shell logic.
+
+## Ansible Progressive Orchestration
+
+- `id`: `iac.ansible-progressive-orchestration`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-progressive-orchestration.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `orchestration`, `progressive-delivery`, `runtime-operations`, `high-availability`, `delivery-pipeline`
+- `summary`: Use host patterns, serial batches, delegation, tags, blocks, and handlers to make multi-host Ansible changes staged, inspectable, and recoverable.
 
 ## Apply Code Continuously
 

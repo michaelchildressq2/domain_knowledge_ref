@@ -1,6 +1,6 @@
 # Operations Recovery And Governance
 
-Pattern count: 59
+Pattern count: 68
 
 ## Adapter Operability Normalization
 
@@ -17,6 +17,78 @@ Pattern count: 59
 - `source`: `patterns/ambassador-local-service-broker.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `modular-architecture`, `scalability`, `safe-change`, `migration`, `runtime-operations`, `module-boundaries`, `parameterization`, `kubernetes`, `service-discovery`, `ambassador`
 - `summary`: Put service discovery, sharding, request splitting, or environment-specific brokering behind a local endpoint so application code can remain simple and portable.
+
+## Ansible Automation Controller Boundaries
+
+- `id`: `iac.ansible-automation-controller-boundaries`
+- `type`: `governance-pattern`
+- `source`: `patterns/ansible-automation-controller-boundaries.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `automation-platform`, `governance`, `access-control`, `runtime-operations`, `ci-cd`
+- `summary`: Use Automation Controller or AWX to separate projects, inventories, credentials, execution environments, job templates, and access control for governed Ansible operations.
+
+## Ansible Cloud Dynamic Inventory
+
+- `id`: `iac.ansible-cloud-dynamic-inventory`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-cloud-dynamic-inventory.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `cloud`, `dynamic-inventory`, `tagging`, `runtime-operations`, `scalability`
+- `summary`: Drive Ansible cloud runs from provider inventory plugins, resource tags, and cache controls instead of hand-maintained host lists.
+
+## Ansible Control Node Dependency Isolation
+
+- `id`: `iac.ansible-control-node-dependency-isolation`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-control-node-dependency-isolation.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `dependency-management`, `reproducibility`, `python`, `ci-cd`, `platform-engineering`
+- `summary`: Isolate Ansible, Python, collection, and control-node dependencies per project so playbook behavior is reproducible across contributors and automation runners.
+
+## Ansible Debugging Feedback Loop
+
+- `id`: `iac.ansible-debugging-feedback-loop`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-debugging-feedback-loop.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `debugging`, `observability`, `runtime-operations`, `testing`, `feedback-loop`
+- `summary`: Diagnose Ansible failures by narrowing the failing assumption with inventory inspection, verbosity, check mode, tags, debug output, and direct remote verification.
+
+## Ansible Image Build Handoff
+
+- `id`: `iac.ansible-image-build-handoff`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-image-build-handoff.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `image-building`, `packer`, `immutable-infrastructure`, `delivery-pipeline`, `reproducibility`
+- `summary`: Use Ansible inside image-building workflows to configure base images once, then hand runtime variation to inventory, variables, and deployment automation.
+
+## Ansible Inventory As System Model
+
+- `id`: `iac.ansible-inventory-as-system-model`
+- `type`: `architecture-pattern`
+- `source`: `patterns/ansible-inventory-as-system-model.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `inventory`, `configuration-management`, `topology`, `runtime-operations`, `platform-engineering`
+- `summary`: Model hosts, groups, connection data, ownership, and runtime discovery in inventory so playbooks can target systems deliberately without embedding topology assumptions.
+
+## Ansible Performance Tuning Budget
+
+- `id`: `iac.ansible-performance-tuning-budget`
+- `type`: `operational-practice`
+- `source`: `patterns/ansible-performance-tuning-budget.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `performance`, `scalability`, `runtime-operations`, `ssh`, `fact-caching`
+- `summary`: Tune Ansible performance only after identifying the dominant cost, then use connection reuse, pipelining, forks, fact strategy, and caching with explicit risk controls.
+
+## Ansible Playbook Convergence
+
+- `id`: `iac.ansible-playbook-convergence`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-playbook-convergence.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `idempotency`, `desired-state`, `configuration-management`, `drift-prevention`, `operability`
+- `summary`: Write Ansible playbooks as readable desired-state workflows that can be re-run safely, report real changes, and avoid unnecessary imperative shell logic.
+
+## Ansible Progressive Orchestration
+
+- `id`: `iac.ansible-progressive-orchestration`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-progressive-orchestration.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `orchestration`, `progressive-delivery`, `runtime-operations`, `high-availability`, `delivery-pipeline`
+- `summary`: Use host patterns, serial batches, delegation, tags, blocks, and handlers to make multi-host Ansible changes staged, inspectable, and recoverable.
 
 ## Apply Code Continuously
 

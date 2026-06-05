@@ -1,6 +1,6 @@
 # Configuration And Contracts
 
-Pattern count: 43
+Pattern count: 51
 
 ## Adapter Operability Normalization
 
@@ -17,6 +17,70 @@ Pattern count: 43
 - `source`: `patterns/ambassador-local-service-broker.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `modular-architecture`, `scalability`, `safe-change`, `migration`, `runtime-operations`, `module-boundaries`, `parameterization`, `kubernetes`, `service-discovery`, `ambassador`
 - `summary`: Put service discovery, sharding, request splitting, or environment-specific brokering behind a local endpoint so application code can remain simple and portable.
+
+## Ansible Collection Dependency Manifest
+
+- `id`: `iac.ansible-collection-dependency-manifest`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-collection-dependency-manifest.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `collections`, `dependency-management`, `versioning`, `modules`, `packaging`
+- `summary`: Use Ansible collections and dependency manifests to package modules, roles, plugins, and playbooks as versioned content with explicit fully qualified dependencies.
+
+## Ansible Control Node Dependency Isolation
+
+- `id`: `iac.ansible-control-node-dependency-isolation`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-control-node-dependency-isolation.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `dependency-management`, `reproducibility`, `python`, `ci-cd`, `platform-engineering`
+- `summary`: Isolate Ansible, Python, collection, and control-node dependencies per project so playbook behavior is reproducible across contributors and automation runners.
+
+## Ansible Custom Module Boundary
+
+- `id`: `iac.ansible-custom-module-boundary`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-custom-module-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `modules`, `extensibility`, `idempotency`, `testing`, `api-integration`
+- `summary`: Create a custom Ansible module when desired-state behavior, validation, check mode, and change reporting are too important or complex for shell tasks or roles.
+
+## Ansible Inventory As System Model
+
+- `id`: `iac.ansible-inventory-as-system-model`
+- `type`: `architecture-pattern`
+- `source`: `patterns/ansible-inventory-as-system-model.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `inventory`, `configuration-management`, `topology`, `runtime-operations`, `platform-engineering`
+- `summary`: Model hosts, groups, connection data, ownership, and runtime discovery in inventory so playbooks can target systems deliberately without embedding topology assumptions.
+
+## Ansible Playbook Convergence
+
+- `id`: `iac.ansible-playbook-convergence`
+- `type`: `delivery-pattern`
+- `source`: `patterns/ansible-playbook-convergence.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `idempotency`, `desired-state`, `configuration-management`, `drift-prevention`, `operability`
+- `summary`: Write Ansible playbooks as readable desired-state workflows that can be re-run safely, report real changes, and avoid unnecessary imperative shell logic.
+
+## Ansible Role Capability Boundary
+
+- `id`: `iac.ansible-role-capability-boundary`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-role-capability-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `roles`, `module-boundaries`, `composability`, `versioning`, `testing`
+- `summary`: Design Ansible roles as small, documented, versioned capabilities with clear defaults, dependencies, handlers, and test scenarios.
+
+## Ansible Variable Precedence Contract
+
+- `id`: `iac.ansible-variable-precedence-contract`
+- `type`: `design-pattern`
+- `source`: `patterns/ansible-variable-precedence-contract.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `configuration-management`, `parameterization`, `variable-precedence`, `secrets-management`, `operability`
+- `summary`: Treat Ansible variable sources and precedence as an explicit contract so defaults, inventory values, secrets, facts, and overrides do not silently fight each other.
+
+## Ansible Vault Secret Boundary
+
+- `id`: `iac.ansible-vault-secret-boundary`
+- `type`: `security-pattern`
+- `source`: `patterns/ansible-vault-secret-boundary.md`
+- `tags`: `infrastructure-as-code`, `ansible`, `secrets-management`, `ansible-vault`, `least-privilege`, `configuration-management`, `security`
+- `summary`: Keep Ansible secrets separate from ordinary inventory and encrypt or externally source them so credentials stay reviewable, scoped, and usable in automation.
 
 ## Apply On Change
 
