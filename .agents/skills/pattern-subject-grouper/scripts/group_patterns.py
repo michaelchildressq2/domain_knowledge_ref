@@ -106,6 +106,14 @@ class Pattern:
     sources: list[str]
 
 
+def find_repo_root(start: Path | None = None) -> Path:
+    current = (start or Path.cwd()).resolve()
+    for path in [current, *current.parents]:
+        if (path / ".git").exists() or ((path / ".agents").is_dir() and (path / "patterns").exists()):
+            return path
+    return current
+
+
 def split_frontmatter(text: str) -> tuple[str, str]:
     if not text.startswith("---\n"):
         raise ValueError("missing frontmatter")
@@ -224,10 +232,12 @@ def write_group(output_dir: Path, slug: str, patterns: list[Pattern]) -> None:
 
 def write_outputs(output_dir: Path, groups: dict[str, list[Pattern]]) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
-    for old in output_dir.glob("*.md"):
-        old.unlink()
-    for old in output_dir.glob("*.json"):
-        old.unlink()
+    generated_names = {"README.md", "manifest.json", "unclassified.md"}
+    generated_names.update(f"{slug}.md" for slug in SUBJECTS)
+    for name in generated_names:
+        old = output_dir / name
+        if old.exists():
+            old.unlink()
 
     ordered = sorted(groups.items(), key=lambda item: (item[0] == "unclassified", item[0]))
     for slug, patterns in ordered:
@@ -268,7 +278,7 @@ def write_outputs(output_dir: Path, groups: dict[str, list[Pattern]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input_dirs", nargs="+", type=Path, help="folders containing pattern .md files")
-    parser.add_argument("--output", type=Path, default=Path("subject-groups"), help="output folder")
+    parser.add_argument("--output", type=Path, help="output folder, defaults to ./work at repo root")
     args = parser.parse_args()
 
     patterns = iter_patterns(args.input_dirs)
@@ -280,8 +290,9 @@ def main() -> int:
         for slug in classify(pattern):
             groups.setdefault(slug, []).append(pattern)
 
-    write_outputs(args.output, groups)
-    print(f"Wrote {args.output}")
+    output_dir = args.output or find_repo_root() / "work"
+    write_outputs(output_dir, groups)
+    print(f"Wrote {output_dir}")
     print(f"Patterns: {len(patterns)}")
     for slug in sorted(groups):
         print(f"{slug}: {len(groups[slug])}")

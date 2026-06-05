@@ -20,11 +20,12 @@ Use this skill to group standalone pattern markdown files by common subject matt
 ```bash
 python3 .agents/skills/pattern-subject-grouper/scripts/group_patterns.py \
   patterns \
-  .agents/skills/infrastructure-as-code-patterns/references/patterns \
-  --output subject-groups
+  .agents/skills/infrastructure-as-code-patterns/references/patterns
 ```
 
-3. Inspect `subject-groups/`.
+The default output folder is the repository-root `./work/` folder. Subject-group files are generated there as additional working output.
+
+3. Inspect `work/`.
    - `README.md`: overview of all subject groups.
    - `manifest.json`: machine-readable group membership.
    - `<subject-slug>.md`: one subject-area index with pattern ids, titles, tags, source paths, and summaries.
@@ -50,7 +51,7 @@ After grouping, verify:
 python3 .agents/skills/pattern-subject-grouper/scripts/group_patterns.py \
   patterns \
   .agents/skills/infrastructure-as-code-patterns/references/patterns \
-  --output /tmp/pattern-subject-groups
+  --output ./work
 ```
 
 Review group counts and inspect `unclassified.md`. A few unclassified patterns are acceptable; many means the taxonomy needs better keywords.

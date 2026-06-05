@@ -22,8 +22,10 @@ Use this skill to convert chapter text into standalone pattern markdown files. P
 2. Build a candidate index.
 
 ```bash
-python3 .agents/skills/chapter-pattern-extractor/scripts/build_candidate_index.py path/to/book-chapters --output ./pattern-work
+python3 .agents/skills/chapter-pattern-extractor/scripts/build_candidate_index.py ./work/book-<cleaned-title>/chapter-out
 ```
+
+The candidate index and any other extraction scratch output must go in the repository-root `./work/` folder unless the user explicitly asks otherwise.
 
 3. Extract and normalize patterns.
    - Read candidates by chapter or part, not all source text at once.
@@ -33,6 +35,7 @@ python3 .agents/skills/chapter-pattern-extractor/scripts/build_candidate_index.p
 
 4. Write pattern files into an output folder where the skill is run.
    - Default output folder: `./patterns/`.
+   - Do not impose an upper limit on the number of patterns. Extract every distinct, defensible pattern, anti-pattern, principle, practice, pitfall, trade-off, or decision guide supported by the chapter text.
    - Write one markdown file per normalized pattern, using lowercase kebab-case filenames.
    - Each file should match the `pattern-library-builder` pattern template.
    - Put key concept tags in each pattern file's frontmatter.

@@ -10,8 +10,9 @@ Use this skill to turn one input PDF into a local folder of plain-text chapter f
 ## Workflow
 
 1. Locate the PDF and choose the output directory.
-   - Default output folder: `<pdf-stem>-chapters/`.
+   - Default output folder: `./work/book-<cleaned-title>/chapter-out/` from the repository root.
    - Folder names and file names should be filesystem-safe slugs based on the book and chapter titles.
+   - Keep raw PDF text output under `./work`; do not write chapter text to tracked folders.
 
 2. Run the bundled parser in Docker first.
 
@@ -30,7 +31,7 @@ docker run --rm -v "$PWD:/work" pdf-chapter-text-extractor path/to/book.pdf
 Optional explicit output:
 
 ```bash
-docker run --rm -v "$PWD:/work" pdf-chapter-text-extractor path/to/book.pdf --output-dir path/to/book-chapters
+docker run --rm -v "$PWD:/work" pdf-chapter-text-extractor path/to/book.pdf --output-dir work/book-cleaned-title/chapter-out
 ```
 
 If Docker is unavailable, use host Python as a fallback. The host environment needs `pypdfium2` installed, or `pdftotext` available on `PATH`.
@@ -42,7 +43,7 @@ python3 .agents/skills/pdf-chapter-text-extractor/scripts/pdf_to_chapters.py pat
 Optional explicit output:
 
 ```bash
-python3 .agents/skills/pdf-chapter-text-extractor/scripts/pdf_to_chapters.py path/to/book.pdf --output-dir path/to/book-chapters
+python3 .agents/skills/pdf-chapter-text-extractor/scripts/pdf_to_chapters.py path/to/book.pdf --output-dir work/book-cleaned-title/chapter-out
 ```
 
 3. Inspect `context.txt`.

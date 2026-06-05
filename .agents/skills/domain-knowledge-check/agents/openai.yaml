@@ -1,7 +1,7 @@
 interface:
   display_name: "Domain Knowledge Check"
-  short_description: "Knowledge index for domain specific problems"
-  default_prompt: "Use $domain-knowlowdge-check to review this input and search the ./subject-groups for relevant reference primciples and patterns. Make suggestions grounded by the relevant patterns."
+  short_description: "Grounded pattern alignment reviews"
+  default_prompt: "Use $domain-knowledge-check to review this design against local subject-group patterns and return grounded alignment scores."
 
 policy:
   allow_implicit_invocation: true

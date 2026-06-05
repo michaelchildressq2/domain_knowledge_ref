@@ -64,6 +64,18 @@ def slugify(value: str, fallback: str = "book") -> str:
     return slug[:80] or fallback
 
 
+def find_repo_root(start: Path | None = None) -> Path:
+    current = (start or Path.cwd()).resolve()
+    for path in [current, *current.parents]:
+        if (path / ".git").exists() or ((path / ".agents").is_dir() and (path / "patterns").exists()):
+            return path
+    return current
+
+
+def default_output_dir(title: str) -> Path:
+    return find_repo_root() / "work" / f"book-{slugify(title)}" / "chapter-out"
+
+
 def clean_line(line: str) -> str:
     return re.sub(r"\s+", " ", line).strip()
 
@@ -312,7 +324,7 @@ def main(argv: list[str] | None = None) -> int:
         raise RuntimeError("Very little text was extracted; this PDF may need OCR.")
 
     title = detect_title(pages, pdf_path)
-    output_dir = args.output_dir or pdf_path.with_name(f"{slugify(pdf_path.stem)}-chapters")
+    output_dir = args.output_dir or default_output_dir(title)
     output_dir.mkdir(parents=True, exist_ok=True)
     clean_previous_outputs(output_dir)
     output_dir.joinpath("full-text.txt").write_text("\n".join(all_lines), encoding="utf-8")
