@@ -1,6 +1,6 @@
 # Modular Boundaries
 
-Pattern count: 43
+Pattern count: 47
 
 ## Adapter Operability Normalization
 
@@ -329,6 +329,38 @@ Pattern count: 43
 - `source`: `patterns/stack-parameter-registry.md`
 - `tags`: `infrastructure-as-code`, `configuration-management`, `parameterization`, `registry`, `environment-parity`, `cloud-agnostic`
 - `summary`: Use a registry for shared stack parameters when direct manual inputs become fragile or duplicated.
+
+## Terraform Module Contract
+
+- `id`: `iac.terraform-module-contract`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-module-contract.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `reuse`, `contracts`, `inputs`, `outputs`, `versioning`
+- `summary`: Design Terraform modules as explicit contracts with inputs, outputs, provider expectations, path-safe internals, and versioned consumption rather than copied environment code.
+
+## Terraform Production Module Design
+
+- `id`: `iac.terraform-production-module-design`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-production-module-design.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `production-readiness`, `composability`, `testing`, `versioning`, `platform-engineering`
+- `summary`: Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks.
+
+## Terraform Provider Topology
+
+- `id`: `iac.terraform-provider-topology`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-provider-topology.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `providers`, `multi-account`, `multi-region`, `aliases`, `versioning`, `module-boundaries`
+- `summary`: Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege.
+
+## Terraform State Isolation Layout
+
+- `id`: `iac.terraform-state-isolation-layout`
+- `type`: `architecture-pattern`
+- `source`: `patterns/terraform-state-isolation-layout.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `environments`, `blast-radius`, `file-layout`, `stack-design`
+- `summary`: Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded.
 
 ## Transaction Boundary Fit
 

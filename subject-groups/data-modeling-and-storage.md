@@ -1,6 +1,6 @@
 # Data Modeling And Storage
 
-Pattern count: 21
+Pattern count: 23
 
 ## Aggregate Lifecycle Boundary
 
@@ -145,6 +145,22 @@ Pattern count: 21
 - `source`: `patterns/storage-engine-fit.md`
 - `tags`: `data-systems`, `storage-engine`, `database`, `performance`, `design-review`, `cloud-agnostic`
 - `summary`: Choose storage engines by write/read mix, update pattern, range-query needs, and compaction behavior.
+
+## Terraform Remote State Backend
+
+- `id`: `iac.terraform-remote-state-backend`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-remote-state-backend.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `remote-state`, `locking`, `reproducibility`, `security`
+- `summary`: Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage.
+
+## Terraform Stable Resource Addressing
+
+- `id`: `iac.terraform-stable-resource-addressing`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-stable-resource-addressing.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `refactoring`, `for-each`, `count`, `lifecycle`, `zero-downtime`, `safe-change`
+- `summary`: Use stable keys, lifecycle-aware refactors, and cautious conditionals so Terraform does not replace resources merely because list order, count indexes, or addresses changed.
 
 ## Transaction Boundary Fit
 

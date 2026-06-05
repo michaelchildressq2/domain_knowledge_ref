@@ -1,6 +1,6 @@
 # System Qualities
 
-Pattern count: 40
+Pattern count: 41
 
 ## Adapter Operability Normalization
 
@@ -297,6 +297,14 @@ Pattern count: 40
 - `source`: `patterns/team-workflow-metrics.md`
 - `tags`: `infrastructure-as-code`, `governance`, `operability`, `delivery-pipeline`, `safe-change`, `cloud-agnostic`
 - `summary`: Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes.
+
+## Test Code Antipattern Linting
+
+- `id`: `iac.test-code-antipattern-linting`
+- `type`: `testing-practice`
+- `source`: `patterns/test-code-antipattern-linting.md`
+- `tags`: `infrastructure-as-code`, `testing`, `linting`, `maintainability`, `technical-debt`, `quality-gates`
+- `summary`: Lint IaC test code and supporting scripts so the tests that protect infrastructure do not become a separate source of defects and maintenance drag.
 
 ## Transaction Boundary Fit
 

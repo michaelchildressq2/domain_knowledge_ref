@@ -1,6 +1,6 @@
 # Pipelines Streams And Derived Data
 
-Pattern count: 42
+Pattern count: 44
 
 ## Apply Code Continuously
 
@@ -305,6 +305,22 @@ Pattern count: 42
 - `source`: `patterns/team-workflow-metrics.md`
 - `tags`: `infrastructure-as-code`, `governance`, `operability`, `delivery-pipeline`, `safe-change`, `cloud-agnostic`
 - `summary`: Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes.
+
+## Terraform Team Delivery Workflow
+
+- `id`: `iac.terraform-team-delivery-workflow`
+- `type`: `delivery-pattern`
+- `source`: `patterns/terraform-team-delivery-workflow.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `team-workflow`, `ci-cd`, `code-review`, `adoption`, `delivery-pipeline`, `governance`
+- `summary`: Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes.
+
+## Test Every IaC Change
+
+- `id`: `iac.test-every-iac-change`
+- `type`: `delivery-practice`
+- `source`: `patterns/test-every-iac-change.md`
+- `tags`: `infrastructure-as-code`, `testing`, `continuous-integration`, `delivery-pipeline`, `drift-detection`, `feedback`
+- `summary`: Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift.
 
 ## Trust But Verify Dataflows
 

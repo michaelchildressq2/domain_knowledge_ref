@@ -1,6 +1,6 @@
 # Change And Delivery
 
-Pattern count: 60
+Pattern count: 70
 
 ## Adapter Operability Normalization
 
@@ -42,6 +42,14 @@ Pattern count: 60
 - `tags`: `infrastructure-as-code`, `anti-pattern`, `configuration-drift`, `runtime-operations`, `safe-change`, `cloud-agnostic`
 - `summary`: Applying configuration only for selected changes lets unmanaged drift accumulate and makes future changes unpredictable.
 
+## Automated IaC Test Harness
+
+- `id`: `iac.automated-iac-test-harness`
+- `type`: `testing-practice`
+- `source`: `patterns/automated-iac-test-harness.md`
+- `tags`: `infrastructure-as-code`, `testing`, `automation`, `test-harness`, `ci-cd`, `tool-selection`
+- `summary`: Use an automated IaC-specific test harness to provision fixtures, run checks, and clean up consistently instead of relying on manual validation.
+
 ## Batch Derived Views
 
 - `id`: `data.batch-derived-views`
@@ -49,6 +57,14 @@ Pattern count: 60
 - `source`: `patterns/batch-derived-views.md`
 - `tags`: `data-systems`, `batch-processing`, `derived-data`, `analytics`, `data-pipeline`, `cloud-agnostic`
 - `summary`: Use batch processing to build reliable derived datasets when freshness can lag and complete input scans are acceptable.
+
+## Behavior Focused IaC Test Coverage
+
+- `id`: `iac.behavior-focused-iac-test-coverage`
+- `type`: `testing-practice`
+- `source`: `patterns/behavior-focused-iac-test-coverage.md`
+- `tags`: `infrastructure-as-code`, `testing`, `coverage`, `behavior-driven-testing`, `verification`, `safe-change`
+- `summary`: Measure IaC test coverage by expected infrastructure behavior and observable state, not by the number of declarations or files touched by tests.
 
 ## Cloud Age Change Economics
 
@@ -290,6 +306,14 @@ Pattern count: 60
 - `tags`: `infrastructure-as-code`, `safe-change`, `modular-architecture`, `delivery-pipeline`, `design-review`, `cloud-agnostic`
 - `summary`: Make infrastructure changes smaller by splitting systems, sequencing work, and limiting each change to one coherent intent.
 
+## Remote IaC Testing
+
+- `id`: `iac.remote-iac-testing`
+- `type`: `testing-practice`
+- `source`: `patterns/remote-iac-testing.md`
+- `tags`: `infrastructure-as-code`, `testing`, `remote-testing`, `integration-testing`, `cloud`, `provider-behavior`
+- `summary`: Run selected IaC tests against remote or provider-backed environments when local execution cannot reveal provider, platform, or runtime integration defects.
+
 ## Repeatable Processes
 
 - `id`: `iac.repeatable-processes`
@@ -353,6 +377,14 @@ Pattern count: 60
 - `source`: `patterns/safe-infrastructure-change.md`
 - `tags`: `infrastructure-as-code`, `safe-change`, `rollback`, `disaster-recovery`, `design-review`, `cloud-agnostic`
 - `summary`: Choose a change strategy based on reversibility, blast radius, data risk, compatibility, and observability.
+
+## Sandbox IaC Testing
+
+- `id`: `iac.sandbox-iac-testing`
+- `type`: `testing-practice`
+- `source`: `patterns/sandbox-iac-testing.md`
+- `tags`: `infrastructure-as-code`, `testing`, `sandbox`, `isolation`, `cost-control`, `safe-change`
+- `summary`: Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems.
 
 ## Scatter Gather Request Parallelism
 
@@ -449,6 +481,54 @@ Pattern count: 60
 - `source`: `patterns/team-workflow-metrics.md`
 - `tags`: `infrastructure-as-code`, `governance`, `operability`, `delivery-pipeline`, `safe-change`, `cloud-agnostic`
 - `summary`: Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes.
+
+## Terraform Production Module Design
+
+- `id`: `iac.terraform-production-module-design`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-production-module-design.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `production-readiness`, `composability`, `testing`, `versioning`, `platform-engineering`
+- `summary`: Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks.
+
+## Terraform Stable Resource Addressing
+
+- `id`: `iac.terraform-stable-resource-addressing`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-stable-resource-addressing.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `refactoring`, `for-each`, `count`, `lifecycle`, `zero-downtime`, `safe-change`
+- `summary`: Use stable keys, lifecycle-aware refactors, and cautious conditionals so Terraform does not replace resources merely because list order, count indexes, or addresses changed.
+
+## Terraform Team Delivery Workflow
+
+- `id`: `iac.terraform-team-delivery-workflow`
+- `type`: `delivery-pattern`
+- `source`: `patterns/terraform-team-delivery-workflow.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `team-workflow`, `ci-cd`, `code-review`, `adoption`, `delivery-pipeline`, `governance`
+- `summary`: Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes.
+
+## Terraform Test Strategy
+
+- `id`: `iac.terraform-test-strategy`
+- `type`: `testing-pattern`
+- `source`: `patterns/terraform-test-strategy.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `testing`, `unit-testing`, `integration-testing`, `plan-testing`, `end-to-end-testing`, `ci-cd`
+- `summary`: Combine static, plan, unit, integration, and end-to-end Terraform tests so each risk is checked at the cheapest layer that can catch it.
+
+## Test Code Antipattern Linting
+
+- `id`: `iac.test-code-antipattern-linting`
+- `type`: `testing-practice`
+- `source`: `patterns/test-code-antipattern-linting.md`
+- `tags`: `infrastructure-as-code`, `testing`, `linting`, `maintainability`, `technical-debt`, `quality-gates`
+- `summary`: Lint IaC test code and supporting scripts so the tests that protect infrastructure do not become a separate source of defects and maintenance drag.
+
+## Test Every IaC Change
+
+- `id`: `iac.test-every-iac-change`
+- `type`: `delivery-practice`
+- `source`: `patterns/test-every-iac-change.md`
+- `tags`: `infrastructure-as-code`, `testing`, `continuous-integration`, `delivery-pipeline`, `drift-detection`, `feedback`
+- `summary`: Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift.
 
 ## Timeout Retry Backoff
 

@@ -1,6 +1,6 @@
 # Replication Consistency And Coordination
 
-Pattern count: 27
+Pattern count: 30
 
 ## Aggregate Lifecycle Boundary
 
@@ -186,6 +186,14 @@ Pattern count: 27
 - `tags`: `data-systems`, `distributed-workflow`, `transactions`, `event-driven`, `implementation-planning`, `cloud-agnostic`
 - `summary`: Coordinate multi-step business workflows with explicit state and compensating actions when one distributed transaction is not appropriate.
 
+## Sandbox IaC Testing
+
+- `id`: `iac.sandbox-iac-testing`
+- `type`: `testing-practice`
+- `source`: `patterns/sandbox-iac-testing.md`
+- `tags`: `infrastructure-as-code`, `testing`, `sandbox`, `isolation`, `cost-control`, `safe-change`
+- `summary`: Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems.
+
 ## Sharded Service Routing
 
 - `id`: `platform.sharded-service-routing`
@@ -201,6 +209,22 @@ Pattern count: 27
 - `source`: `patterns/shared-cluster-boundary.md`
 - `tags`: `infrastructure-as-code`, `kubernetes`, `governance`, `security`, `cost-management`, `design-review`
 - `summary`: Share clusters only when isolation, ownership, capacity, and change-management boundaries are explicit and enforceable.
+
+## Terraform Remote State Backend
+
+- `id`: `iac.terraform-remote-state-backend`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-remote-state-backend.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `remote-state`, `locking`, `reproducibility`, `security`
+- `summary`: Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage.
+
+## Terraform State Isolation Layout
+
+- `id`: `iac.terraform-state-isolation-layout`
+- `type`: `architecture-pattern`
+- `source`: `patterns/terraform-state-isolation-layout.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `environments`, `blast-radius`, `file-layout`, `stack-design`
+- `summary`: Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded.
 
 ## Timeout Retry Backoff
 

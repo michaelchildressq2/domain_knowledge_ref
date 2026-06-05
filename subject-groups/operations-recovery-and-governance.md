@@ -1,6 +1,6 @@
 # Operations Recovery And Governance
 
-Pattern count: 55
+Pattern count: 59
 
 ## Adapter Operability Normalization
 
@@ -266,6 +266,14 @@ Pattern count: 55
 - `tags`: `infrastructure-as-code`, `observability`, `safe-change`, `runtime-operations`, `delivery-pipeline`, `cloud-agnostic`
 - `summary`: Use monitoring as part of the testing strategy for risks that only appear during or after live infrastructure change.
 
+## Remote IaC Testing
+
+- `id`: `iac.remote-iac-testing`
+- `type`: `testing-practice`
+- `source`: `patterns/remote-iac-testing.md`
+- `tags`: `infrastructure-as-code`, `testing`, `remote-testing`, `integration-testing`, `cloud`, `provider-behavior`
+- `summary`: Run selected IaC tests against remote or provider-backed environments when local execution cannot reveal provider, platform, or runtime integration defects.
+
 ## Replicated Stateless Serving
 
 - `id`: `platform.replicated-stateless-serving`
@@ -409,6 +417,30 @@ Pattern count: 55
 - `source`: `patterns/team-workflow-metrics.md`
 - `tags`: `infrastructure-as-code`, `governance`, `operability`, `delivery-pipeline`, `safe-change`, `cloud-agnostic`
 - `summary`: Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes.
+
+## Terraform Production Module Design
+
+- `id`: `iac.terraform-production-module-design`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-production-module-design.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `production-readiness`, `composability`, `testing`, `versioning`, `platform-engineering`
+- `summary`: Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks.
+
+## Terraform Team Delivery Workflow
+
+- `id`: `iac.terraform-team-delivery-workflow`
+- `type`: `delivery-pattern`
+- `source`: `patterns/terraform-team-delivery-workflow.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `team-workflow`, `ci-cd`, `code-review`, `adoption`, `delivery-pipeline`, `governance`
+- `summary`: Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes.
+
+## Test Every IaC Change
+
+- `id`: `iac.test-every-iac-change`
+- `type`: `delivery-practice`
+- `source`: `patterns/test-every-iac-change.md`
+- `tags`: `infrastructure-as-code`, `testing`, `continuous-integration`, `delivery-pipeline`, `drift-detection`, `feedback`
+- `summary`: Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift.
 
 ## Timeout Retry Backoff
 

@@ -1,6 +1,6 @@
 # Configuration And Contracts
 
-Pattern count: 38
+Pattern count: 43
 
 ## Adapter Operability Normalization
 
@@ -297,6 +297,46 @@ Pattern count: 38
 - `source`: `patterns/supple-domain-design.md`
 - `tags`: `domain-driven-design`, `software-design`, `code-readability`, `refactoring`, `testability`, `design-review`
 - `summary`: Shape important domain code so intention, effects, assertions, and conceptual boundaries are obvious to client developers and maintainers.
+
+## Terraform Module Contract
+
+- `id`: `iac.terraform-module-contract`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-module-contract.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `reuse`, `contracts`, `inputs`, `outputs`, `versioning`
+- `summary`: Design Terraform modules as explicit contracts with inputs, outputs, provider expectations, path-safe internals, and versioned consumption rather than copied environment code.
+
+## Terraform Production Module Design
+
+- `id`: `iac.terraform-production-module-design`
+- `type`: `design-pattern`
+- `source`: `patterns/terraform-production-module-design.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `modules`, `production-readiness`, `composability`, `testing`, `versioning`, `platform-engineering`
+- `summary`: Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks.
+
+## Terraform Provider Topology
+
+- `id`: `iac.terraform-provider-topology`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-provider-topology.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `providers`, `multi-account`, `multi-region`, `aliases`, `versioning`, `module-boundaries`
+- `summary`: Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege.
+
+## Terraform Remote State Backend
+
+- `id`: `iac.terraform-remote-state-backend`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-remote-state-backend.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `remote-state`, `locking`, `reproducibility`, `security`
+- `summary`: Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage.
+
+## Terraform Team Delivery Workflow
+
+- `id`: `iac.terraform-team-delivery-workflow`
+- `type`: `delivery-pattern`
+- `source`: `patterns/terraform-team-delivery-workflow.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `team-workflow`, `ci-cd`, `code-review`, `adoption`, `delivery-pipeline`, `governance`
+- `summary`: Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes.
 
 ## Version Controlled Infrastructure
 

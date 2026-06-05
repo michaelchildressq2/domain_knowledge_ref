@@ -229,6 +229,36 @@
         "summary": "Applying configuration only for selected changes lets unmanaged drift accumulate and makes future changes unpredictable."
       },
       {
+        "id": "iac.automated-iac-test-harness",
+        "title": "Automated IaC Test Harness",
+        "type": "testing-practice",
+        "path": "patterns/automated-iac-test-harness.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "automation",
+          "test-harness",
+          "ci-cd",
+          "tool-selection"
+        ],
+        "summary": "Use an automated IaC-specific test harness to provision fixtures, run checks, and clean up consistently instead of relying on manual validation."
+      },
+      {
+        "id": "iac.behavior-focused-iac-test-coverage",
+        "title": "Behavior Focused IaC Test Coverage",
+        "type": "testing-practice",
+        "path": "patterns/behavior-focused-iac-test-coverage.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "coverage",
+          "behavior-driven-testing",
+          "verification",
+          "safe-change"
+        ],
+        "summary": "Measure IaC test coverage by expected infrastructure behavior and observable state, not by the number of declarations or files touched by tests."
+      },
+      {
         "id": "iac.cloud-age-change-economics",
         "title": "Cloud Age Change Economics",
         "type": "decision-guide",
@@ -527,6 +557,21 @@
         "summary": "Make infrastructure changes smaller by splitting systems, sequencing work, and limiting each change to one coherent intent."
       },
       {
+        "id": "iac.remote-iac-testing",
+        "title": "Remote IaC Testing",
+        "type": "testing-practice",
+        "path": "patterns/remote-iac-testing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "remote-testing",
+          "integration-testing",
+          "cloud",
+          "provider-behavior"
+        ],
+        "summary": "Run selected IaC tests against remote or provider-backed environments when local execution cannot reveal provider, platform, or runtime integration defects."
+      },
+      {
         "id": "iac.repeatable-processes",
         "title": "Repeatable Processes",
         "type": "delivery-pattern",
@@ -632,6 +677,21 @@
         "summary": "Choose a change strategy based on reversibility, blast radius, data risk, compatibility, and observability."
       },
       {
+        "id": "iac.sandbox-iac-testing",
+        "title": "Sandbox IaC Testing",
+        "type": "testing-practice",
+        "path": "patterns/sandbox-iac-testing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "sandbox",
+          "isolation",
+          "cost-control",
+          "safe-change"
+        ],
+        "summary": "Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems."
+      },
+      {
         "id": "iac.secrets-out-of-source",
         "title": "Secrets Out Of Source",
         "type": "governance-pattern",
@@ -720,6 +780,104 @@
           "cloud-agnostic"
         ],
         "summary": "Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes."
+      },
+      {
+        "id": "iac.terraform-production-module-design",
+        "title": "Terraform Production Module Design",
+        "type": "design-pattern",
+        "path": "patterns/terraform-production-module-design.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "production-readiness",
+          "composability",
+          "testing",
+          "versioning",
+          "platform-engineering"
+        ],
+        "summary": "Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks."
+      },
+      {
+        "id": "iac.terraform-stable-resource-addressing",
+        "title": "Terraform Stable Resource Addressing",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-stable-resource-addressing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "refactoring",
+          "for-each",
+          "count",
+          "lifecycle",
+          "zero-downtime",
+          "safe-change"
+        ],
+        "summary": "Use stable keys, lifecycle-aware refactors, and cautious conditionals so Terraform does not replace resources merely because list order, count indexes, or addresses changed."
+      },
+      {
+        "id": "iac.terraform-team-delivery-workflow",
+        "title": "Terraform Team Delivery Workflow",
+        "type": "delivery-pattern",
+        "path": "patterns/terraform-team-delivery-workflow.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "team-workflow",
+          "ci-cd",
+          "code-review",
+          "adoption",
+          "delivery-pipeline",
+          "governance"
+        ],
+        "summary": "Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes."
+      },
+      {
+        "id": "iac.terraform-test-strategy",
+        "title": "Terraform Test Strategy",
+        "type": "testing-pattern",
+        "path": "patterns/terraform-test-strategy.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "testing",
+          "unit-testing",
+          "integration-testing",
+          "plan-testing",
+          "end-to-end-testing",
+          "ci-cd"
+        ],
+        "summary": "Combine static, plan, unit, integration, and end-to-end Terraform tests so each risk is checked at the cheapest layer that can catch it."
+      },
+      {
+        "id": "iac.test-code-antipattern-linting",
+        "title": "Test Code Antipattern Linting",
+        "type": "testing-practice",
+        "path": "patterns/test-code-antipattern-linting.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "linting",
+          "maintainability",
+          "technical-debt",
+          "quality-gates"
+        ],
+        "summary": "Lint IaC test code and supporting scripts so the tests that protect infrastructure do not become a separate source of defects and maintenance drag."
+      },
+      {
+        "id": "iac.test-every-iac-change",
+        "title": "Test Every IaC Change",
+        "type": "delivery-practice",
+        "path": "patterns/test-every-iac-change.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "continuous-integration",
+          "delivery-pipeline",
+          "drift-detection",
+          "feedback"
+        ],
+        "summary": "Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift."
       },
       {
         "id": "iac.version-controlled-infrastructure",
@@ -1437,6 +1595,90 @@
         "summary": "Use a registry for shared stack parameters when direct manual inputs become fragile or duplicated."
       },
       {
+        "id": "iac.terraform-module-contract",
+        "title": "Terraform Module Contract",
+        "type": "design-pattern",
+        "path": "patterns/terraform-module-contract.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "reuse",
+          "contracts",
+          "inputs",
+          "outputs",
+          "versioning"
+        ],
+        "summary": "Design Terraform modules as explicit contracts with inputs, outputs, provider expectations, path-safe internals, and versioned consumption rather than copied environment code."
+      },
+      {
+        "id": "iac.terraform-production-module-design",
+        "title": "Terraform Production Module Design",
+        "type": "design-pattern",
+        "path": "patterns/terraform-production-module-design.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "production-readiness",
+          "composability",
+          "testing",
+          "versioning",
+          "platform-engineering"
+        ],
+        "summary": "Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks."
+      },
+      {
+        "id": "iac.terraform-provider-topology",
+        "title": "Terraform Provider Topology",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-provider-topology.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "providers",
+          "multi-account",
+          "multi-region",
+          "aliases",
+          "versioning",
+          "module-boundaries"
+        ],
+        "summary": "Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege."
+      },
+      {
+        "id": "iac.terraform-remote-state-backend",
+        "title": "Terraform Remote State Backend",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-remote-state-backend.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "remote-state",
+          "locking",
+          "reproducibility",
+          "security"
+        ],
+        "summary": "Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage."
+      },
+      {
+        "id": "iac.terraform-team-delivery-workflow",
+        "title": "Terraform Team Delivery Workflow",
+        "type": "delivery-pattern",
+        "path": "patterns/terraform-team-delivery-workflow.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "team-workflow",
+          "ci-cd",
+          "code-review",
+          "adoption",
+          "delivery-pipeline",
+          "governance"
+        ],
+        "summary": "Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes."
+      },
+      {
         "id": "iac.version-controlled-infrastructure",
         "title": "Version Controlled Infrastructure",
         "type": "delivery-pattern",
@@ -1851,6 +2093,39 @@
           "database"
         ],
         "summary": "Handle persistent data explicitly when changing or replacing infrastructure, using segregation, replication, reload, or a deliberate mix."
+      },
+      {
+        "id": "iac.terraform-remote-state-backend",
+        "title": "Terraform Remote State Backend",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-remote-state-backend.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "remote-state",
+          "locking",
+          "reproducibility",
+          "security"
+        ],
+        "summary": "Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage."
+      },
+      {
+        "id": "iac.terraform-stable-resource-addressing",
+        "title": "Terraform Stable Resource Addressing",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-stable-resource-addressing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "refactoring",
+          "for-each",
+          "count",
+          "lifecycle",
+          "zero-downtime",
+          "safe-change"
+        ],
+        "summary": "Use stable keys, lifecycle-aware refactors, and cautious conditionals so Terraform does not replace resources merely because list order, count indexes, or addresses changed."
       },
       {
         "id": "platform.container-contracts-for-reuse",
@@ -2354,6 +2629,73 @@
           "cloud-agnostic"
         ],
         "summary": "Use a registry for shared stack parameters when direct manual inputs become fragile or duplicated."
+      },
+      {
+        "id": "iac.terraform-module-contract",
+        "title": "Terraform Module Contract",
+        "type": "design-pattern",
+        "path": "patterns/terraform-module-contract.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "reuse",
+          "contracts",
+          "inputs",
+          "outputs",
+          "versioning"
+        ],
+        "summary": "Design Terraform modules as explicit contracts with inputs, outputs, provider expectations, path-safe internals, and versioned consumption rather than copied environment code."
+      },
+      {
+        "id": "iac.terraform-production-module-design",
+        "title": "Terraform Production Module Design",
+        "type": "design-pattern",
+        "path": "patterns/terraform-production-module-design.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "production-readiness",
+          "composability",
+          "testing",
+          "versioning",
+          "platform-engineering"
+        ],
+        "summary": "Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks."
+      },
+      {
+        "id": "iac.terraform-provider-topology",
+        "title": "Terraform Provider Topology",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-provider-topology.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "providers",
+          "multi-account",
+          "multi-region",
+          "aliases",
+          "versioning",
+          "module-boundaries"
+        ],
+        "summary": "Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege."
+      },
+      {
+        "id": "iac.terraform-state-isolation-layout",
+        "title": "Terraform State Isolation Layout",
+        "type": "architecture-pattern",
+        "path": "patterns/terraform-state-isolation-layout.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "environments",
+          "blast-radius",
+          "file-layout",
+          "stack-design"
+        ],
+        "summary": "Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded."
       },
       {
         "id": "iac.version-controlled-infrastructure",
@@ -3050,6 +3392,21 @@
         "summary": "Use monitoring as part of the testing strategy for risks that only appear during or after live infrastructure change."
       },
       {
+        "id": "iac.remote-iac-testing",
+        "title": "Remote IaC Testing",
+        "type": "testing-practice",
+        "path": "patterns/remote-iac-testing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "remote-testing",
+          "integration-testing",
+          "cloud",
+          "provider-behavior"
+        ],
+        "summary": "Run selected IaC tests against remote or provider-backed environments when local execution cannot reveal provider, platform, or runtime integration defects."
+      },
+      {
         "id": "iac.repository-boundaries",
         "title": "Repository Boundaries",
         "type": "decision-guide",
@@ -3198,6 +3555,55 @@
           "cloud-agnostic"
         ],
         "summary": "Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes."
+      },
+      {
+        "id": "iac.terraform-production-module-design",
+        "title": "Terraform Production Module Design",
+        "type": "design-pattern",
+        "path": "patterns/terraform-production-module-design.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "modules",
+          "production-readiness",
+          "composability",
+          "testing",
+          "versioning",
+          "platform-engineering"
+        ],
+        "summary": "Build production Terraform modules as small, composable, testable, and versioned units backed by explicit production-readiness checks."
+      },
+      {
+        "id": "iac.terraform-team-delivery-workflow",
+        "title": "Terraform Team Delivery Workflow",
+        "type": "delivery-pattern",
+        "path": "patterns/terraform-team-delivery-workflow.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "team-workflow",
+          "ci-cd",
+          "code-review",
+          "adoption",
+          "delivery-pipeline",
+          "governance"
+        ],
+        "summary": "Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes."
+      },
+      {
+        "id": "iac.test-every-iac-change",
+        "title": "Test Every IaC Change",
+        "type": "delivery-practice",
+        "path": "patterns/test-every-iac-change.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "continuous-integration",
+          "delivery-pipeline",
+          "drift-detection",
+          "feedback"
+        ],
+        "summary": "Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift."
       },
       {
         "id": "iac.version-controlled-infrastructure",
@@ -4383,6 +4789,38 @@
         "summary": "Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes."
       },
       {
+        "id": "iac.terraform-team-delivery-workflow",
+        "title": "Terraform Team Delivery Workflow",
+        "type": "delivery-pattern",
+        "path": "patterns/terraform-team-delivery-workflow.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "team-workflow",
+          "ci-cd",
+          "code-review",
+          "adoption",
+          "delivery-pipeline",
+          "governance"
+        ],
+        "summary": "Make Terraform a team workflow with incremental adoption, version control, review, automated checks, controlled applies, and promotion paths for infrastructure changes."
+      },
+      {
+        "id": "iac.test-every-iac-change",
+        "title": "Test Every IaC Change",
+        "type": "delivery-practice",
+        "path": "patterns/test-every-iac-change.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "continuous-integration",
+          "delivery-pipeline",
+          "drift-detection",
+          "feedback"
+        ],
+        "summary": "Trigger an appropriate IaC test path for every infrastructure change, and supplement change-triggered tests with scheduled runs that catch environmental drift."
+      },
+      {
         "id": "iac.version-controlled-infrastructure",
         "title": "Version Controlled Infrastructure",
         "type": "delivery-pattern",
@@ -4822,6 +5260,21 @@
         "summary": "Choose infrastructure repository boundaries based on ownership, delivery cadence, dependency management, and change isolation."
       },
       {
+        "id": "iac.sandbox-iac-testing",
+        "title": "Sandbox IaC Testing",
+        "type": "testing-practice",
+        "path": "patterns/sandbox-iac-testing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "sandbox",
+          "isolation",
+          "cost-control",
+          "safe-change"
+        ],
+        "summary": "Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems."
+      },
+      {
         "id": "iac.shared-cluster-boundary",
         "title": "Shared Cluster Boundary",
         "type": "decision-guide",
@@ -4835,6 +5288,38 @@
           "design-review"
         ],
         "summary": "Share clusters only when isolation, ownership, capacity, and change-management boundaries are explicit and enforceable."
+      },
+      {
+        "id": "iac.terraform-remote-state-backend",
+        "title": "Terraform Remote State Backend",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-remote-state-backend.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "remote-state",
+          "locking",
+          "reproducibility",
+          "security"
+        ],
+        "summary": "Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage."
+      },
+      {
+        "id": "iac.terraform-state-isolation-layout",
+        "title": "Terraform State Isolation Layout",
+        "type": "architecture-pattern",
+        "path": "patterns/terraform-state-isolation-layout.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "environments",
+          "blast-radius",
+          "file-layout",
+          "stack-design"
+        ],
+        "summary": "Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded."
       },
       {
         "id": "platform.coordinated-batch-aggregation",
@@ -5018,6 +5503,21 @@
         "summary": "Use one stack code project with simple parameters to create consistent instances across environments or tenants."
       },
       {
+        "id": "iac.sandbox-iac-testing",
+        "title": "Sandbox IaC Testing",
+        "type": "testing-practice",
+        "path": "patterns/sandbox-iac-testing.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "sandbox",
+          "isolation",
+          "cost-control",
+          "safe-change"
+        ],
+        "summary": "Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems."
+      },
+      {
         "id": "iac.secrets-out-of-source",
         "title": "Secrets Out Of Source",
         "type": "governance-pattern",
@@ -5061,6 +5561,71 @@
           "design-review"
         ],
         "summary": "Share clusters only when isolation, ownership, capacity, and change-management boundaries are explicit and enforceable."
+      },
+      {
+        "id": "iac.terraform-provider-topology",
+        "title": "Terraform Provider Topology",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-provider-topology.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "providers",
+          "multi-account",
+          "multi-region",
+          "aliases",
+          "versioning",
+          "module-boundaries"
+        ],
+        "summary": "Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege."
+      },
+      {
+        "id": "iac.terraform-remote-state-backend",
+        "title": "Terraform Remote State Backend",
+        "type": "implementation-pattern",
+        "path": "patterns/terraform-remote-state-backend.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "remote-state",
+          "locking",
+          "reproducibility",
+          "security"
+        ],
+        "summary": "Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage."
+      },
+      {
+        "id": "iac.terraform-secret-state-minimization",
+        "title": "Terraform Secret State Minimization",
+        "type": "security-pattern",
+        "path": "patterns/terraform-secret-state-minimization.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "secrets-management",
+          "state-management",
+          "plan-files",
+          "oidc",
+          "security"
+        ],
+        "summary": "Keep secrets out of Terraform source while also minimizing secret exposure through variables, state, plan files, logs, provider credentials, and remote-state outputs."
+      },
+      {
+        "id": "iac.terraform-state-isolation-layout",
+        "title": "Terraform State Isolation Layout",
+        "type": "architecture-pattern",
+        "path": "patterns/terraform-state-isolation-layout.md",
+        "tags": [
+          "infrastructure-as-code",
+          "terraform",
+          "state-management",
+          "environments",
+          "blast-radius",
+          "file-layout",
+          "stack-design"
+        ],
+        "summary": "Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded."
       },
       {
         "id": "platform.sidecar-application-augmentation",
@@ -5506,6 +6071,21 @@
           "cloud-agnostic"
         ],
         "summary": "Use delivery and reliability metrics together to evaluate whether infrastructure workflow changes improve outcomes."
+      },
+      {
+        "id": "iac.test-code-antipattern-linting",
+        "title": "Test Code Antipattern Linting",
+        "type": "testing-practice",
+        "path": "patterns/test-code-antipattern-linting.md",
+        "tags": [
+          "infrastructure-as-code",
+          "testing",
+          "linting",
+          "maintainability",
+          "technical-debt",
+          "quality-gates"
+        ],
+        "summary": "Lint IaC test code and supporting scripts so the tests that protect infrastructure do not become a separate source of defects and maintenance drag."
       },
       {
         "id": "platform.adapter-operability-normalization",

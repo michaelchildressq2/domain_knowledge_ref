@@ -1,6 +1,6 @@
 # Security And Secrets
 
-Pattern count: 12
+Pattern count: 17
 
 ## Cluster Per Environment
 
@@ -58,6 +58,14 @@ Pattern count: 12
 - `tags`: `infrastructure-as-code`, `stack-design`, `environment-parity`, `parameterization`, `implementation-planning`, `cloud-agnostic`
 - `summary`: Use one stack code project with simple parameters to create consistent instances across environments or tenants.
 
+## Sandbox IaC Testing
+
+- `id`: `iac.sandbox-iac-testing`
+- `type`: `testing-practice`
+- `source`: `patterns/sandbox-iac-testing.md`
+- `tags`: `infrastructure-as-code`, `testing`, `sandbox`, `isolation`, `cost-control`, `safe-change`
+- `summary`: Test infrastructure changes in isolated disposable environments so validation can create, update, and destroy resources without harming production or shared systems.
+
 ## Secrets Out Of Source
 
 - `id`: `iac.secrets-out-of-source`
@@ -89,6 +97,38 @@ Pattern count: 12
 - `source`: `patterns/sidecar-application-augmentation.md`
 - `tags`: `platform-engineering`, `cloud-architecture`, `modular-architecture`, `operability`, `security`, `migration`, `implementation-planning`, `module-boundaries`, `parameterization`, `kubernetes`, `sidecar`
 - `summary`: Add tightly coupled auxiliary behavior beside an application container when shared local resources let the helper improve the app without changing its code.
+
+## Terraform Provider Topology
+
+- `id`: `iac.terraform-provider-topology`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-provider-topology.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `providers`, `multi-account`, `multi-region`, `aliases`, `versioning`, `module-boundaries`
+- `summary`: Model Terraform provider source, version, aliases, accounts, regions, and module injection explicitly so multi-provider infrastructure stays reviewable and least-privilege.
+
+## Terraform Remote State Backend
+
+- `id`: `iac.terraform-remote-state-backend`
+- `type`: `implementation-pattern`
+- `source`: `patterns/terraform-remote-state-backend.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `remote-state`, `locking`, `reproducibility`, `security`
+- `summary`: Store Terraform state in a shared remote backend with locking, encryption, versioning, and tightly scoped access instead of treating local state or version control as team-safe storage.
+
+## Terraform Secret State Minimization
+
+- `id`: `iac.terraform-secret-state-minimization`
+- `type`: `security-pattern`
+- `source`: `patterns/terraform-secret-state-minimization.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `secrets-management`, `state-management`, `plan-files`, `oidc`, `security`
+- `summary`: Keep secrets out of Terraform source while also minimizing secret exposure through variables, state, plan files, logs, provider credentials, and remote-state outputs.
+
+## Terraform State Isolation Layout
+
+- `id`: `iac.terraform-state-isolation-layout`
+- `type`: `architecture-pattern`
+- `source`: `patterns/terraform-state-isolation-layout.md`
+- `tags`: `infrastructure-as-code`, `terraform`, `state-management`, `environments`, `blast-radius`, `file-layout`, `stack-design`
+- `summary`: Split Terraform state by environment and component using explicit file layout and backend keys so failures, permissions, plans, and dependencies stay bounded.
 
 ## Timeout Retry Backoff
 
